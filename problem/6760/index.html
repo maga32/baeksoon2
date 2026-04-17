@@ -67,7 +67,7 @@
 
 <p>Every time Anatevka makes a suggestion, Brian must, of course, analyze its quality. If either of the two seats she suggests is already occupied, he should explain that her recommendation is invalid with a simple &ldquo;No&rdquo;. Otherwise, he&rsquo;d like to calculate the total inconvenience of both seats in such an arrangement. The inconvenience of sitting in seat (r,c) is the number of occupied seats in its field of vision (excluding itself). The field of vision of seat (r,c) includes all seats which are no further than it from seat (1,c) by Manhattan distance (i.e., Manhattan distance between (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>) is |x<sub>1</sub> &minus; x<sub>2</sub>| + |y<sub>1</sub> &minus; y<sub>2</sub>|), as shown below (with the &ldquo;S&rdquo; representing a suggested seat, and an &ldquo;F&rdquo; representing a seat within its field of vision):</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/7f2c689d-f919-4bbc-a9cd-b108ce540f0e/-/preview/" style="width: 235px; height: 174px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/7f2c689d-f919-4bbc-a9cd-b108ce540f0e/-/preview" style="width: 235px; height: 174px;" /></p>
 
 <p>After all of the events have taken place, the movie is about to start, and a final decision must be made on where to sit - and Brian will handle that. He concludes that seats that are &ldquo;far&rdquo; are clearly superior (as they offer a broader view of the screen), and he knows that the point of going to the movies is to have an optimal viewing experience, so selecting two adjacent seats is certainly not&nbsp;mandatory. As such, he&rsquo;d like to determine the minimum total inconvenience for any two &ldquo;far&rdquo;, unoccupied seats in the theatre. Note that, if one of the chosen seats is in the other&rsquo;s field of vision, this does not count towards its inconvenience - it&rsquo;s only determined by other people sitting in the theatre.</p>
 
@@ -149,13 +149,13 @@ No
 								<div id="problem_sample_explain_1" class="problem-text">
 								<p>When Anatevka makes her first suggestion, the front 3 rows and leftmost 5 columns of the theatre look as follows (where a &ldquo;P&rdquo; represents a person, and an &ldquo;S&rdquo; represents one of the suggested seats):</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/cee8870a-eb1f-4f11-b0e2-d7ec9553ea1d/-/preview/" style="width: 172px; height: 137px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/cee8870a-eb1f-4f11-b0e2-d7ec9553ea1d/-/preview" style="width: 172px; height: 137px;" /></p>
 
 <p>The person sitting in seat (1,2) is in the field of vision of both suggested seats, while the person sitting in seat (2,5) is only in the way of the right one. As such, the total inconvenience of the two seats is 1 + 2 = 3.</p>
 
 <p>The second suggestion is shown below:</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/b3e48e32-4323-4cfa-99e3-cd03b54aac7b/-/preview/" style="width: 173px; height: 138px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/b3e48e32-4323-4cfa-99e3-cd03b54aac7b/-/preview" style="width: 173px; height: 138px;" /></p>
 
 <p>These two seats aren&rsquo;t obstructed by any people, so their total inconvenience is 0. The final suggestion is invalid, as one of its two seats (seat (2,3)) is already occupied.</p>
 

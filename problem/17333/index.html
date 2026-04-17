@@ -61,20 +61,20 @@
 				<div id="problem_description" class="problem-text">
 				<p>Pipe Marbles is one of little X&#39;s favorite games. In this question, we shall consider a simple version of it. A screen of the game is depicted below in figure 1.</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/a4369f28-d7c5-4a53-9772-44adf8e7097b/-/preview/" /><br />
+<p><img alt="" src="https://baeksoon3.pages.dev/a4369f28-d7c5-4a53-9772-44adf8e7097b/-/preview" /><br />
 (<i>Figure 1.</i>)</p>
 
 <p>At the start of the game, the upper and lower pipes on the left side each contain a fixed amount of marbles (some are dark colored and some are light colored), and the output pipe on the right side is empty. In each move, one can select a pipe from the left side and move the&nbsp;<b>rightmost marble</b>&nbsp;from that pipe to the right output pipe.</p>
 
 <p>For instance, we can move a marble from the lower left pipe into the output pipe, as depicted below in figure 2.<br />
-<img alt="" src="https://upload.acmicpc.net/ef02a357-6d4b-429b-89d0-3293fef82ae8/-/preview/" /><br />
+<img alt="" src="https://baeksoon3.pages.dev/ef02a357-6d4b-429b-89d0-3293fef82ae8/-/preview" /><br />
 (<i>Figure 2.</i>)</p>
 
 <p>Assuming there are&nbsp;<var>n</var>&nbsp;marbles in the upper and&nbsp;<var>m</var>&nbsp;marbles in the lower pipe, then completing the game will require&nbsp;<var>n</var>&nbsp;+&nbsp;<var>m</var>&nbsp;moves to move all of the marbles from the left pipe to the output pipe. At the end, the&nbsp;<var>n</var>&nbsp;+&nbsp;<var>m</var>&nbsp;marbles in the output pipe&nbsp;<b>from left to right</b>&nbsp;will form an&nbsp;<b>output sequence</b>.</p>
 
 <p>As a math fanatic, little X knows that he has a total of&nbsp;<var>C</var>(<var>n</var>&nbsp;+&nbsp;<var>m</var>,&nbsp;<var>n</var>) different ways to complete the game, where different ways can produce the same output sequence. For example, consider the game scenario depicted below in figure 3:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/320c2632-296b-4a1d-9000-8d619b2cf59f/-/preview/" /><br />
+<p><img alt="" src="https://baeksoon3.pages.dev/320c2632-296b-4a1d-9000-8d619b2cf59f/-/preview" /><br />
 (<i>Figure 3.</i>)</p>
 
 <p>We let the letter&nbsp;<code>A</code>&nbsp;represent light colored balls and the letter&nbsp;<code>B</code>&nbsp;represent dark colored balls. Denote the action of moving a ball from the upper pipe to the right pipe as&nbsp;<code>U</code>, and the action of moving a ball from the lower pipe to the right pipe as&nbsp;<code>D</code>, then there are a total of&nbsp;<var>C</var>(2+1, 1) = 3 different ways to complete the game. Respectively, they are&nbsp;<code>UUD</code>,&nbsp;<code>UDU</code>, and&nbsp;<code>DUU</code>. Finally, the corresponding output sequences produced are (from left to right) respectively&nbsp;<code>BAB</code>,&nbsp;<code>BBA</code>, and&nbsp;<code>BBA</code>. The latter two ways therefore produce the same output sequence.</p>

@@ -70,11 +70,11 @@
 
 <p>One day, Alex is meeting up with his peers. Everyone sat in a circle around a big round table. After taking a look, Alex immediately recalls his spanning tree problem. If he considers each of his peers as a node and neighboring peers (nodes with a distance of 1 between them) to be connected by an edge, then this becomes a cycle. However, Alex has already mastered calculations on cycles and is not really interested anymore. So, he changed the graph up a bit: Not only does he add an edge between neighboring peers, but he also adds an edge between pairs of peers who are separated by a single seat (nodes with a distance of 2 between them). Now, he considers peers connected by a single edge to be&nbsp;<b>adjacent</b>, as depicted in the following figure.</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/54b9e928-d45e-4952-8afb-2dfd59202580/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/54b9e928-d45e-4952-8afb-2dfd59202580/-/preview" /></p>
 
 <p>Alex has never tried counting spanning trees on this kind of graph before, however, he recalls his teacher explaining that there is a general method for counting the number of spanning trees on any type of graph. First, construct an&nbsp;<var>n</var>&times;<var>n</var>&nbsp;matrix&nbsp;<var>A</var>&nbsp;= {&nbsp;<var>a<sub>i&thinsp;j</sub></var>&nbsp;} such that:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/572eb677-e757-4f27-912b-03c3668a9cc0/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/572eb677-e757-4f27-912b-03c3668a9cc0/-/preview" /></p>
 
 <p>where&nbsp;<var>d<sub>i</sub></var>&nbsp;represents the degree of node&nbsp;<var>i</var>.</p>
 
@@ -82,7 +82,7 @@
 
 <p>Therefore the number of spanning trees in this graph is |<var>B</var>| = 3528. Alex noticed that using the general method, calculations are very complex and tedious. Yet, he cannot find any other formulas that are simpler than this. So, he simplified the graph. At some place he broke apart the circle around the table. This way, his peers form a chain of nodes, where an edge exist between all pairs of nodes with a distance of 1 or a distance of 2 of between them. The case for 8 nodes is depicted below:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/65b4e0b9-b5a5-4e63-98e1-cd8c55ff53cd/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/65b4e0b9-b5a5-4e63-98e1-cd8c55ff53cd/-/preview" /></p>
 
 <p>This way, the total number of spanning trees is reduced by a great amount. Alex just thinks and thinks, until the entire meeting is over. Finally, he comes up with an efficient method to count the number of spanning trees in this graph. However, if he also decides to join nodes with a distance of 3, then once again he will not know how to find the answer efficiently. Please help Alex count the number of spanning trees in these types of graphs!</p>
 

@@ -61,17 +61,17 @@
 				<div id="problem_description" class="problem-text">
 				<p>Binary heap은 Heap을 구현하는 방법의 하나이며 Complete binary tree 형태로 만들어진다. Complete binary tree는 Binary tree의 종류 중 하나로, 마지막 레벨을 제외한 나머지 레벨에는 노드가 꽉 차 있고 마지막 레벨에는 노드들이 왼쪽으로 쏠려있는 모습을 하고 있다.</p>
 
-<p align="center" style="text-align:center"><img alt="" src="https://upload.acmicpc.net/967da834-1431-450d-adc7-74206337e0db/-/preview/" style="width: 550px; height: 166px;" /><br />
+<p align="center" style="text-align:center"><img alt="" src="https://baeksoon3.pages.dev/967da834-1431-450d-adc7-74206337e0db/-/preview" style="width: 550px; height: 166px;" /><br />
 &lt;그림&gt; Complete binary tree의 예</p>
 
 <p>Complete binary tree는 1차원 배열을 이용하면 쉽게 구현할 수 있다. Complete binary tree의 각 노드에 아래 그림과 같은 식으로 번호를 붙이고 이를 1차원 배열에서의 index로 삼으면 자연스럽게 구현할 수 있다.</p>
 
-<p align="center" style="text-align:center"><img alt="" src="https://upload.acmicpc.net/37a017dc-ede8-4354-8bd4-d80e38279fed/-/preview/" style="width: 300px; height: 204px;" /><br />
+<p align="center" style="text-align:center"><img alt="" src="https://baeksoon3.pages.dev/37a017dc-ede8-4354-8bd4-d80e38279fed/-/preview" style="width: 300px; height: 204px;" /><br />
 &lt;그림&gt; Complete binary tree에 번호를 붙인 모습</p>
 
 <p>이를 이용하면 Binary min-heap에 원소를 삽입하는 알고리즘을 간단하게 구현할 수 있다. 아래 코드는 삽입 알고리즘을 C++로 구현한 코드이다(코드의 자잘한 문제들은 신경 쓰지 않기로 한다). 코드의 insert_heap() 함수를 호출하면 우리가 만든 Binary min-heap에 원소가 적절히 삽입된다.</p>
 
-<p align="center" style="text-align:center"><img alt="" src="https://upload.acmicpc.net/ee41d2bc-3313-4a40-8e6b-cb3903f44872/-/preview/" /><br />
+<p align="center" style="text-align:center"><img alt="" src="https://baeksoon3.pages.dev/ee41d2bc-3313-4a40-8e6b-cb3903f44872/-/preview" /><br />
 &lt;그림&gt; Binary min-heap에 원소를 삽입하는 알고리즘을 구현한 코드</p>
 
 <p>비어있는 Binary min-heap에 1 이상 N 이하의 서로 다른 자연수 N개를 insert_heap() 함수를 이용해 삽입할 것이다. N개의 자연수를 전부 다 삽입한 후에, 자연수 k가 heap 배열의 p번째(배열의 맨 처음 공간을 0번째로 생각한다)에 위치하도록 하고 싶다. 이렇게 만드는 삽입 순서를 찾는 프로그램을 작성하시오.</p>

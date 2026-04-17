@@ -65,7 +65,7 @@
 
 <p>So, a new problem is born in the face of scientists: predict for a given fossilized millennium worm how different it is from the theoretical model. Generally speaking, for a given millennium worm fossil shape A, the problem is to find a shape B that fits the theoretical mode, such that B is the most likely shape to turn into shape A when it was being fossilized.</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/5102cfa1-4386-47d0-9437-f87e93d2ff09/-/preview/" /><br />
+<p><img alt="" src="https://baeksoon3.pages.dev/5102cfa1-4386-47d0-9437-f87e93d2ff09/-/preview" /><br />
 &nbsp;</p>
 
 <p>The &quot;millennium worm physical features model&quot; as proposed by theoretical scientists is as follows (depicted in the left figure): its&nbsp;<b>body</b>&nbsp;consists of the&nbsp;<b>head</b>,&nbsp;<b>tail</b>,&nbsp;<b>torso</b>, and&nbsp;<b>feet</b>&nbsp;as its four major components.</p>
@@ -78,7 +78,7 @@
 
 <p>Note: The shape of its feet cannot regress to a triangle (thus the length of each foot&#39;s base is greater than zero), and the number of feet on each side of the torso may be different. (As shown in the given figure, there are 4 feet on the left side, and 5 feet on the right side.)</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/8c7a5fcf-8fac-482d-a854-f7c3f11d1019/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/8c7a5fcf-8fac-482d-a854-f7c3f11d1019/-/preview" /></p>
 
 <p>As it can be seen, in the&nbsp;<var>x</var><var>y</var>&nbsp;Cartesian coordinate system, the borders of the solid region formed by the torso and feet are each parallel or perpendicular to the axes. For simplicity, let us assume that the lengths of each of these borderlines are positive integers. Thus, we can believe that the body of each millennium worm is representable using a bunch of unit squares. Each unit is uniquely defined by some coordinates (<var>x</var>,&nbsp;<var>y</var>). Let the distance between the head and tail be&nbsp;<var>n</var>; then we can use 2&times;<var>n</var>&nbsp;integers to describe one millennium worm B (as shown in the figure to the right): Split B up into&nbsp;<var>n</var>&nbsp;strips of width 1 parallel to the&nbsp;<var>x</var>&nbsp;direction. Let the leftmost unit of each strip have the&nbsp;<var>x</var>-coordinate of&nbsp;<var>L<sub>i</sub></var>, and the rightmost unit have the&nbsp;<var>x</var>-coordinate of&nbsp;<var>R<sub>i</sub></var>. Then, we can use (<var>n</var>,&nbsp;<var>L</var><sub>1</sub>,&nbsp;<var>L</var><sub>2</sub>, &hellip;,&nbsp;<var>L<sub>n</sub></var>,&nbsp;<var>R</var><sub>1</sub>,&nbsp;<var>R</var><sub>2</sub>, &hellip;,&nbsp;<var>R<sub>n</sub></var>) to specify a single millennium worm.</p>
 
@@ -96,7 +96,7 @@
 
 <p>If we satisfy the five conditions above, we can still use (<var>n</var>,&nbsp;<var>L</var>&rsquo;<sub>1</sub>,&nbsp;<var>L</var>&rsquo;<sub>2</sub>, &hellip;,&nbsp;<var>L</var>&rsquo;<var><sub>n</sub></var>,&nbsp;<var>R</var>&rsquo;<sub>1</sub>,&nbsp;<var>R</var>&rsquo;<sub>2</sub>, &hellip;,&nbsp;<var>R</var>&rsquo;<var><sub>n</sub></var>) to specify the conditions of a fossilized millennium worm, where&nbsp;<var>L</var>&rsquo;<var><sub>i</sub></var>&nbsp;&le;&nbsp;<var>R</var>&rsquo;<var><sub>i</sub></var>. For example, examine the following figure:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/3690e64e-cc7e-4e29-b8ee-d55e3322e9b0/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/3690e64e-cc7e-4e29-b8ee-d55e3322e9b0/-/preview" /></p>
 
 <p>Your task is, given the specifications of a fossilized millennium worm&nbsp;<var>A</var>&lt;<var>n</var>,&nbsp;<var>L</var>&rsquo;,&nbsp;<var>R</var>&rsquo;&gt;, determine specifications&nbsp;<var>B</var>&lt;<var>n</var>,&nbsp;<var>L</var>,&nbsp;<var>R</var>&gt; which satisfy the theoretical millennium worm description, such that&nbsp;<var>B</var>&nbsp;can be transformed into&nbsp;<var>A</var>&nbsp;through the corrosion process, and that the cost to transform&nbsp;<var>B</var>&nbsp;to&nbsp;<var>A</var>&nbsp;(i.e. the number of cells that need to be corroded) is minimized. Output this smallest number of steps.</p>
 
@@ -176,7 +176,7 @@
 											<div class="col-md-12">
 							<section id="sample_explain_1" class="problem-section">
 								<div id="problem_sample_explain_1" class="problem-text">
-								<p><img alt="" src="https://upload.acmicpc.net/2d08c076-fa7d-4144-9daf-942c5b5a2106/-/preview/" /><br />
+								<p><img alt="" src="https://baeksoon3.pages.dev/2d08c076-fa7d-4144-9daf-942c5b5a2106/-/preview" /><br />
 &nbsp;</p>
 
 								</div>

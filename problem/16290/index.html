@@ -65,13 +65,13 @@
 
 <p>A block&rsquo;s location is denoted by the (<em>x</em>, <em>y</em>) coordinate of its lower-left corner point. Figure J.1 shows an example how a block moves. The size of each block is shown in the figure. Suppose seven blocks (A to G, all are colored green) are already placed and block H has the turn to move. The dotted rectangle indicates the starting and the intermediate locations of block H (orange block at final position). The red lines indicate the moving path. As Figure J.1 shows it first moves left-downward (in the first phase) until it hits block C. Then the direction changes leftward, which means it enters the second phase of movement, and continues moving as farther as possible until it hits block F. Then it continues moving in the second phase by changing directions until it can no longer move.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/eea7861e-a014-466d-b504-633751c98b3b/-/preview/" style="width: 380px; height: 265px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/eea7861e-a014-466d-b504-633751c98b3b/-/preview" style="width: 380px; height: 265px;" /></p>
 
 <p style="text-align: center;">Figure J.1</p>
 
 <p>How to treat some special cases will be explained with an example as shown in Figure J.2. While a block, say G, is moving left-downward in the first phase, if the lower left corner point of it hits another block, say block D, at the upper right corner point of D, G may have two choices of changing direction either downward or&nbsp;leftward. In such case, moving downward has higher priority than moving leftward. If G, in such case, is unable to move downward due to some other blocks, then its direction changes leftward. While block G is moving left-downward its upper-left corner point (or its lower-right corner point) may hit another block&rsquo;s corner points as shown in Figure J.2 (Note that block F and block C hit block G at their corner points during the first phase movement.) In such case, block G continues moving in the same direction since it has not been blocked by the corner points.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/880a3277-b3d9-479f-bf99-a9e34c012e29/-/preview/" style="width: 243px; height: 289px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/880a3277-b3d9-479f-bf99-a9e34c012e29/-/preview" style="width: 243px; height: 289px;" /></p>
 
 <p style="text-align: center;">Figure J.2</p>
 
@@ -91,7 +91,7 @@
 	<li>(&Delta;<em>x</em>, &Delta;<em>y</em>) to indicate the direction of the first movement (see the red line in Figure J.3). Each block begins move from location (<em>x</em>, <em>y</em>) toward (<em>x</em> &minus; &Delta;x, <em>y</em> &minus; &Delta;y).</li>
 </ol>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/42429f2d-01b6-4c34-b5f6-d77b0488a0b8/-/preview/" style="width: 175px; height: 137px;" /><br />
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/42429f2d-01b6-4c34-b5f6-d77b0488a0b8/-/preview" style="width: 175px; height: 137px;" /><br />
 &nbsp;</p>
 
 <p style="text-align: center;">Figure J.3</p>

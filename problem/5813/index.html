@@ -70,13 +70,13 @@
 
 <p>아래 그림 모두는 이상적인 도시가 아니다. 처음 두 개는 첫 번째 조건을 만족하지 않고, 세 번째 그림은 두 번째 조건을 만족하지 않고, 네 번째 그림은 두 조건 모두를 만족하지 않는다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/efe39e13-9b18-42c7-9195-00bfb0ec8da0/-/preview/" style="width: 618px; height: 141px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/efe39e13-9b18-42c7-9195-00bfb0ec8da0/-/preview" style="width: 618px; height: 141px;" /></p>
 
 <p>도시 안을 이동할 때, 걸음은 한 블록에서 인접한 블록으로 이동하는 것을 말한다. 비어있는 셀들로는 이동할 수 없다. v<sub>0</sub>, v<sub>1</sub>, &hellip;, v<sub>N-1</sub> 을 그리드 위에 놓여 있는 N 개 블록들의 좌표라고 하자. 좌표 v<sub>i</sub> 와 vj 를 가진 임의의 서로 다른 두 블록들에 대해서, 그들간의 거리 d(vi, vj)는 이 블록들 중 하나에서 다른 곳으로 가는데 요구되는 걸음들의 최소 수로 정의된다.</p>
 
 <p>아래 그림은 좌표 v<sub>0</sub> = (2, 5), v<sub>1</sub> = (2, 6), v<sub>2</sub> = (3, 3), v<sub>3</sub> = (3, 6), v<sub>4</sub> = (4, 3), v<sub>5</sub> = (4, 4), v<sub>6</sub> = (4, 5), v<sub>7</sub> = (4, 6), v<sub>8</sub> = (5, 3), v<sub>9</sub> = (5, 4), 그리고 v<sub>10</sub> = (5, 6) 를 가지는 N = 11 개의 블록들로 이루어진 이상적인 도시를 나타낸다. 그러면, d(v<sub>1</sub>, v<sub>3</sub>) = 1, d(v<sub>1</sub>, v<sub>8</sub>) = 6, d(v<sub>6</sub>, v<sub>10</sub>) = 2, 그리고 d(v<sub>9</sub>, v<sub>10</sub>) = 4 이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/e68edeca-dfbf-4b6e-a99b-a3e77e008efb/-/preview/" style="width: 213px; height: 206px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/e68edeca-dfbf-4b6e-a99b-a3e77e008efb/-/preview" style="width: 213px; height: 206px;" /></p>
 
 <p>당신은 모든 가능한 i &lt; j 인 두 블록 쌍 v<sub>i</sub>와 v<sub>j</sub>에 대한 거리들의 합을 계산하는 프로그램을 작성해야 한다. 정확히 말하면, 프로그램은 다음의 합을 계산해야 한다.</p>
 

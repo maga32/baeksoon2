@@ -63,7 +63,7 @@
 
 <p>트리와 캑터스는 그래프의 종류 중 하나인데, 트리는 모든 정점이 연결되어 있으면서, 단순 사이클이 만들어지지 않는 그래프를 뜻하고, 캑터스는 모든 정점이 연결되어 있으면서, 단순 사이클이 만들어지지만, 서로 다른 두 단순 사이클에 동시에 들어가는 간선이 없는 그래프를 뜻한다. 예를 들어 보자.</p>
 
-<p><img alt="cactus1" src="https://upload.acmicpc.net/3c443902-30e9-41f6-83d2-77cc0957f6ba/-/preview/" style="display: block; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; width: 100%; max-width: 500px;" /></p>
+<p><img alt="cactus1" src="https://baeksoon3.pages.dev/3c443902-30e9-41f6-83d2-77cc0957f6ba/-/preview" style="display: block; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; width: 100%; max-width: 500px;" /></p>
 
 <p>왼쪽에서 첫 번째 그림은 트리, 두 번째 그림은 캑터스, 세 번째 그림은 트리도 캑터스도 아닌 그래프를 나타낸다. 단순 사이클이 많아질수록 끔찍해지는 외형을 볼 수 있을 것이다.</p>
 
@@ -73,7 +73,7 @@
 
 <p>간선을 잘라내면, 그 간선이 연결되어 있던 두 정점에는 상처가 하나씩 생긴다. 그래프의 억센 생명력은 이 상처를 곧바로 자가치유하여, 새로운 간선 하나와 그 끝의 새 정점 하나를 자라나게 한다. 각 간선과 정점에는 <em>회복 수치</em>가 있는데, 잘라낸 간선의 회복 수치가 <em>R<sub>e</sub></em>, 상처가 난 정점의 회복 수치가 <em>R<sub>v</sub></em>일 때, 상처 부위에서는 길이가 <em>R<sub>e</sub></em>+ <em>R<sub>v</sub></em>인 간선과 그 끝의 정점이 자라서 상처가 아문다.</p>
 
-<p><img alt="cactus2" src="https://upload.acmicpc.net/8847ece8-5e71-4b4b-b920-2cfbc9d04e99/-/preview/" style="display: block; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; width: 100%; max-width: 550px;" /></p>
+<p><img alt="cactus2" src="https://baeksoon3.pages.dev/8847ece8-5e71-4b4b-b920-2cfbc9d04e99/-/preview" style="display: block; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 15px; width: 100%; max-width: 550px;" /></p>
 
 <p>위의 그림에서 빨간색 간선이 잘라내는 간선이고, 초록색 간선이 새롭게 자란 간선이다. 이렇게 캑터스에 있는 모든 단순 사이클에서 간선을 정확히 하나씩 잘라내면 트리가 된다. 사람들은 트리의 <em>지름</em>이 작은 트리를 좋아하는 경향이 있는데, 트리의 지름이란 정점과 정점 사이의 최단 거리 중 최댓값을 말한다. 쿠는 잘 팔리는 트리를 만들기 위해 만들어지는 트리의 지름이 최소화되도록 캑터스의 간선을 잘라낼 것이다. 캑터스가 주어질 때, 쿠가 만들어낼 트리의 지름이 어떻게 될지 구하는 프로그램을 작성하라.</p>
 

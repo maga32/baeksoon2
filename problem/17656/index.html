@@ -61,7 +61,7 @@
 				<div id="problem_description" class="problem-text">
 				<p>Vasi finally decided to visit Ruse and take a walk in its park. From her tour guide, she knows that the park has a rectangular shape and its long sides are $N$ units long. On each of those two sides, there are $N + 1$ interesting places (cafes, tennis courts, fountains and so on), so $2N + 2$ interesting places in total. They are numbered and connected with alleys, like it is shown in the figure below ($N = 3$ in this case). The park has a single entrance (the place with number $1$) and a single exit (the place with number $2N + 2$).</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/755e3a52-6ca5-41ef-823e-550e2797d300/-/preview/" style="width: 359px; height: 173px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/755e3a52-6ca5-41ef-823e-550e2797d300/-/preview" style="width: 359px; height: 173px;" /></p>
 
 <p>All alleys in the park are one-way and when taking a walk one must respect each alley&rsquo;s direction. The alleys are oriented in such a way that <strong>there aren&rsquo;t any cycles</strong>. Also, the entrance is the only place where all alleys are out-going, and the exit is the only place <strong>where all alleys are in-going</strong>. For all other places the following rule holds: <strong>there are both in-going and out-going alleys</strong>.</p>
 
@@ -99,7 +99,7 @@ void state_direction(const std::pair&lt;int, int&gt;&amp; edge, bool direction);
 
 <p>Your function must call <code>state_direction</code> for each alley (again represented in the same way) with the found direction, which is stated with the parameter <code>direction</code>. If at any moment your program calls one of the two functions with an invalid alley or <code>state_direction</code> with the wrong direction, you will receive zero points for that test. You will also receive zero points for a test, if there are alleys, for which your function didn&rsquo;t call <code>state_direction</code>.</p>
 
-<p>Send a file called <code>park.cpp</code> to the grading system. In it, besides the function <code>run</code>, you can have any sort of helping functions, classes, variables and so on. However, it must not contain a <code>main</code> function and it must include the header&nbsp;<code><a href="https://upload.acmicpc.net/c71d270e-7beb-4031-8786-db5e370c05f0/">park.h</a></code> with an instruction to the pre-processor <code>#include &quot;park.h&quot;</code> in its beginning.</p>
+<p>Send a file called <code>park.cpp</code> to the grading system. In it, besides the function <code>run</code>, you can have any sort of helping functions, classes, variables and so on. However, it must not contain a <code>main</code> function and it must include the header&nbsp;<code><a href="https://baeksoon3.pages.dev/c71d270e-7beb-4031-8786-db5e370c05f0">park.h</a></code> with an instruction to the pre-processor <code>#include &quot;park.h&quot;</code> in its beginning.</p>
 
 							</div>
 						</section>
@@ -161,7 +161,7 @@ void state_direction(const std::pair&lt;int, int&gt;&amp; edge, bool direction);
 								<h2>로컬 테스팅</h2>
 							</div>
 							<div id="problem_custom_localtesting" class="problem-text">
-								<p>You are given the file <a href="https://upload.acmicpc.net/d537779a-5fcd-43f6-a5b4-adc3e2a09578/">Lgrader.cpp</a>, which you can compile together with your program to test it. When started it will ask you about $N$ and after that about the directions of all alleys one after another (0 or 1). It will print out the communication which is happening. You can modify this file however you want.</p>
+								<p>You are given the file <a href="https://baeksoon3.pages.dev/d537779a-5fcd-43f6-a5b4-adc3e2a09578">Lgrader.cpp</a>, which you can compile together with your program to test it. When started it will ask you about $N$ and after that about the directions of all alleys one after another (0 or 1). It will print out the communication which is happening. You can modify this file however you want.</p>
 
 							</div>
 						</section>
@@ -271,13 +271,13 @@ void state_direction(const std::pair&lt;int, int&gt;&amp; edge, bool direction);
 
 <p>6-7.&nbsp;<code>Run</code> asks about two XORs and gets 1 for both. Let&rsquo;s examine the two possibilities for the alleys:</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/913a7ae4-885a-4a6b-8613-0d10b6122eb1/-/preview/" style="width: 206px; height: 88px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/913a7ae4-885a-4a6b-8613-0d10b6122eb1/-/preview" style="width: 206px; height: 88px;" /></p>
 
 <p>8-10.&nbsp;The second option contains a cycle, but there aren&rsquo;t any cycles in the park, so <code>run</code> states the directions from the first option.</p>
 
 <p>11.&nbsp;<code>Run</code> asks for the XOR of the directions of two alleys and gets 0. Therefore, their directions are the same:</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/f7433886-33d8-4f9d-8a32-8d8019bfb662/-/preview/" style="width: 206px; height: 89px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/f7433886-33d8-4f9d-8a32-8d8019bfb662/-/preview" style="width: 206px; height: 89px;" /></p>
 
 <p>12-13. In the first options all alleys from/to place 2 go in it, but there is only one such place in the park (the exit) and this is not it, so <code>run</code> states the directions from the second option.</p>
 

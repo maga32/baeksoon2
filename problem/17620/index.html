@@ -69,19 +69,19 @@
 
 <p>민수는 드론과 미로를 이용한 특별한 레이싱 게임을 고안했다. 1부터 N<sup>2</sup>까지의 정수로 구성된 수열 s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>T</sub>가 주어지면 전광판에 동일한 수열이 표시되도록 드론을 입구에서 출구까지 움직이면 된다. 단, 동일한 정수가 연속된 경우는 없다고 가정한다. 또한 항상 레이싱 게임이 끝날 수 있는 수열이 주어진다고 가정한다. 전광판에 잘못된 수열이 표시되지 않도록 s<sub>1</sub>부터 순서대로 해당 정수가 적힌 LED 타일들의 테두리를 붉은색으로 바꾸고, 드론이 도착하여 전광판에 s<sub>1</sub>이 표시되면 LED 타일들은 다시 흰색으로 바뀌며 이제 s<sub>2</sub>가 적힌 LED 타일들의 테두리가 붉은색으로 바뀐다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/fd6a3533-9d9d-40e4-8126-1d0a05f38cab/-/preview/" style="width: 190px; height: 157px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/fd6a3533-9d9d-40e4-8126-1d0a05f38cab/-/preview" style="width: 190px; height: 157px;" /></p>
 
 <p style="text-align: center;">&lt;그림 1&gt;</p>
 
 <p>예를 들어, &lt;그림 1&gt;은 4&times;4개의 타일로 구성된 미로를 나타낸다. 미로의 입구는&nbsp;들어가는 화살표로 표시된 곳으로 드론이 입구 바로 밖에 대기하고 있다. 출구는 나가는 화살표로 표시된 곳이다. 미로에는 3개의 LED 타일이 있으며, 각각 1, 9, 15를 나타낸다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/6c473c51-49b6-4b02-a967-73aaeadf2775/-/preview/" style="width: 564px; height: 197px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/6c473c51-49b6-4b02-a967-73aaeadf2775/-/preview" style="width: 564px; height: 197px;" /></p>
 
 <p style="text-align: center;">&lt;그림 2&gt;</p>
 
 <p>수열 1, 15, 9, 15가 주어진 경우 우선 정수 1이 적힌 2행 2열 타일에 붉은색 테두리가 생기고 미로 밖 전광판에는 아직 아무것도 표시되진 않았다(&lt;그림 2&gt; 왼쪽). 드론을 움직여 1이 적힌 LED 타일에 도착하면 전광판에 1이 표시되고(&lt;그림 2&gt; 가운데), 이제 수열의 다음 수인 15에 해당하는 1행 4열 타일에 붉은색 테두리가 생긴다(&lt;그림 2&gt; 오른쪽)</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/82627a2f-c8cf-444f-8440-8770bc7fb584/-/preview/" style="width: 188px; height: 199px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/82627a2f-c8cf-444f-8440-8770bc7fb584/-/preview" style="width: 188px; height: 199px;" /></p>
 
 <p style="text-align: center;">&lt;그림 3&gt;</p>
 
@@ -100,7 +100,7 @@
 					<div id="problem_input" class="problem-text">
 					<p>첫 번째 줄에 미로의 크기를 나타내는 정수 N이 주어진다(1&nbsp;&le; N &le; 500). 이어지는 N줄 각각엔 N개의 정수가 주어지는데 각 정수는 해당 타일의 네 변에 존재하는 벽의 위치를 &lt;그림 4&gt;에서 보인 것처럼 2진수 방식으로 표현한 것으로 0부터 15까지의 값을 가진다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/b70c849e-aab5-4c65-a4b1-ca6f92bac312/-/preview/" style="width: 243px; height: 72px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/b70c849e-aab5-4c65-a4b1-ca6f92bac312/-/preview" style="width: 243px; height: 72px;" /></p>
 
 <p style="text-align: center;">&lt;그림 4&gt;</p>
 

@@ -63,21 +63,21 @@
 
 <p>A text message is placed into a 2D array in row major order, with each character in a unique cell of the array. If the message does not totally fill the array, the empty cells are filled with the capital letters of the alphabet starting with the letter A and going thru the letter Z (repeated as needed). For example, the message, &quot;Meet me at the pizza parlor&quot; in a 6 by 6 array would look like the figure below. Note that all characters are stored as capital letters.</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/e3a2d36e-53a2-4595-b97a-3622948f36e4/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/e3a2d36e-53a2-4595-b97a-3622948f36e4/-/preview" /></p>
 
 <p>To encrypt this message, 3 separate operations are performed as follows:</p>
 
 <p><b>Shake</b>: Each odd column is shifted up one character, with the top most character moving to the bottom of the column. Each even column is shifted down, with the bottom most chararacter moving to the top of the column. The columns are numbered starting at 1. For example:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/1978413e-c8d4-4351-b7d5-8e772a1da634/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/1978413e-c8d4-4351-b7d5-8e772a1da634/-/preview" /></p>
 
 <p><b>Rattle</b>: Each odd row is shifted to the right one character, with the rightmost character moving to the leftmost column in the same row. Each even row is shifted to the left one character, with the leftmost character moving to the rightmost column in the same row. The rows are numbered starting at 1 from the top. For example:</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/cd32c694-a818-46d6-9733-e17f3943381d/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/cd32c694-a818-46d6-9733-e17f3943381d/-/preview" /></p>
 
 <p><b>Roll</b>: Each odd &quot;loop&quot; around the matrix is rotated to the right one character, while each even &quot;loop&quot; is rotated to the left one character, as shown in the figure below. &quot;Loops&quot; are even or odd based on the row number of their top most row (with the top row being row 1).</p>
 
-<p><img alt="" src="https://upload.acmicpc.net/7a5763bd-7c04-4ef7-9be9-2ea01ccf17f2/-/preview/" /></p>
+<p><img alt="" src="https://baeksoon3.pages.dev/7a5763bd-7c04-4ef7-9be9-2ea01ccf17f2/-/preview" /></p>
 
 <p>The matrix size is specified in the encryption key and can vary in size from 3x3 to 100x100. The matrix is always square.</p>
 

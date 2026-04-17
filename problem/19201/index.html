@@ -65,13 +65,13 @@
 
 <p>One can visualize DFA as a directed graph representing its states as vertices and its transitions as edges marked with characters. Terminal states are shown as double circled vertices, the initial state is marked by an arrow. The picture below on the left shows the automaton for a language $(ab)^*$ of words that consist of zero or more repeated words &quot;ab&quot;. The picture below on the right shows the automaton for a language $a^*ba^*ba^*$ that consist of &quot;a&quot; and &quot;b&quot; and contain two &quot;b&quot;-s. For sake of clarity edges marked by &quot;$*$&quot; represent all transitions not explicitly drawn.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/a1e105aa-b974-4b32-8b37-3b6d9a229be3/-/preview/" style="width: 605px; height: 194px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/a1e105aa-b974-4b32-8b37-3b6d9a229be3/-/preview" style="width: 605px; height: 194px;" /></p>
 
 <p>A set $X$ of words is called a <em>regular language</em>&nbsp;if it is equal to $L(A)$ for some DFA $A$. The <em>index</em>&nbsp;of a regular language $X$ denoted as $ind(X)$ is the minimal number of states in a DFA $A$ such that $L(A) = X$. For example, the two automatons shown on the picture above are indeed the minimal DFA-s for the described languages, so $ind((ab)^*)=3$ and $ind(a^*ba^*ba^*)=4$.</p>
 
 <p>It is well known that if $X_1$ and $X_2$ are two regular languages its intersection $X_1 \cap X_2$ is also a regular language. For example, the intersection of the two languages described above is the language $Y=(ab)^*\cap\left(a^*ba^*ba^*\right)=\{abab\}$ that contains a single word &quot;abab&quot;. Clearly a single word language is regular, the automaton for $Y$ is shown on the picture below.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/2dd2030a-95e5-4025-9aea-e68147ac3564/-/preview/" style="width: 548px; height: 146px;" /></p>
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/2dd2030a-95e5-4025-9aea-e68147ac3564/-/preview" style="width: 548px; height: 146px;" /></p>
 
 <p>It is easy to see that if $W$ is a single word language $W = \{w\}$, and length of $w$ is $n$, the index of $W$ is equal to $n+2$.</p>
 
