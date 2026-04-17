@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>5477번: 마라톤 훈련 방해하기</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="5477">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F5477">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F5477' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/5477">5477번</a>
+</li><li><a href="/submit/5477"  >제출</a></li><li><a href="/problem/status/5477"  >맞힌 사람</a></li><li><a href="/short/status/5477"  >숏코딩</a></li><li><a href="/problem/history/5477"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=5477"  >채점 현황</a></li><li><a href="/board/search/all/problem/5477"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	5477번
+ - </span><span id="problem_title">마라톤 훈련 방해하기</span>
+				<span class="problem-label problem-label-multilang">다국어</span>				<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>1 초 </td><td>128 MB</td><td>73</td><td>35</td><td>33</td><td>47.826%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>상근이와 선영이는 보스턴 마라톤에 참가하기 위해 열심히 훈련하고 있다. 대회가 얼마 남지 않았기 때문에, 오늘은 훈련 계획을 세워보려고 한다.</p>
+
+<p>두 사람이 살고있는 나라에는 도시가 N개, 도로가 M개 있다. 모든 도로는 두 도시를 연결하며, 양방향으로 이동할 수 있다. 도로 중에서 N-1개는 포장되어 있고, 나머지는 포장되어 있지 않다.</p>
+
+<p>한 도시에서 다른 도시로 이동할 때, 항상 포장된 도로만을 사용해서 이동할 수 있다. 즉, N개의 도시와 N-1개의 포장된 도로는 트리 구조를 이루고 있다.</p>
+
+<p>또, 한 도시와 연결되어 있는 도로는 최대 10개이다.</p>
+
+<p>마라톤 훈련은 도시에서 시작해서, 도로를 돌아다닌 다음, 시작한 도시로 다시 돌아와서 끝난다. 상근이와 선영이는 훈련하면서 아름다운 풍경도 감상하려고 한다. 따라서, 그들은 이미 지나간 도시를 다시 지나가지 않을 것이고, 지난 도로도 다시 지나지 않을 것이다.</p>
+
+<p>훈련을 시작 하는 도시는 어느곳이 되어도 상관없고, 모든 도시를 방문하지 않아도 된다.</p>
+
+<p>뒤에서 달리는 것이 앞에서 달리는 것보다 더 편하다. 그 이유는 앞에서 달리는 사람이 바람을 막아주기 때문이다. 따라서, 상근이와 선영이는 도시에 들어갈 때 마다 자리를 서로 바꿀 것이다. 또, 서로 훈련한 양이 같아야 하기 때문에 짝수 개의 도로를 지나려고 한다.</p>
+
+<p>상근이와 선영이의 경쟁자 상덕이와 희원이는 위의 조건을 만족시키는 경로를 없애기 위해 포장되어 있지 않은 도로의 일부를 폭파시키기로 했다. 각각의 포장되어 있지 않은 도로를 폭파시키는 비용은 입력으로 주어진다. (비용은 양수) 또, 포장된 도로는 폭파시킬 수 없다.</p>
+
+<p>도시와 도로 네트워크가 주어졌을 때, 상근이와 선영이의 훈련 조건을 만족시키는 경로가 없게하기 위해서 필요한 폭파 비용의 최솟값을 구하는 프로그램을 작성하시오.</p>
+
+				</div>
+				</section>
+			</div>
+										<div class="col-md-12">
+					<section id="input"  class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					<p>첫째 줄에 도시의 수 N과 도로의 수 M이 주어진다. (2 &le; N &le; 1,000, N-1 &le; M &le; 5,000)</p>
+
+<p>다음 M개 줄에는 A, B, C가 주어진다. (1 &le; A, B &le; N, 0 &le; C &le; 10,000) A와 B는 서로 다르며, 도로가 연결하는 도시를 나타낸다. C가 0인 경우는 포장된 도로이다. 포장되어 있지 않은 도로인 경우에는 C값이 양수이며, 이 값은 그 도로를 폭파시키는데 필요한 비용이다.</p>
+
+<p>모든 도시는 많아야 10개 도로와 연결되어져 있다. 또, 한 도시 쌍을 연결하는 도로는 한 개를 넘지 않는다.</p>
+
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output"  class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					<p>첫째 줄에 상근이와 선영이의 훈련 조건을 만족시키는 경로를 없애기 위한 폭파 비용의 최솟값을 출력한다.</p>
+
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit" style="display:none;" class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+						</div>
+			</section>
+			</div>
+																	<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<section id="sampleinput1">
+						<div class="headline">
+						<h2>예제 입력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-input-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-input-1">5 8
+2 1 0
+3 2 0
+4 3 0
+5 4 0
+1 3 2
+3 5 2
+2 4 5
+2 5 1
+</pre>
+						</section>
+					</div>
+					<div class="col-md-6">
+						<section id="sampleoutput1">
+						<div class="headline">
+						<h2>예제 출력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-output-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-output-1">5
+</pre>
+						</section>
+					</div>
+									</div>
+				</div>
+										<div class="col-md-12">
+				<section id="hint"  class="problem-section">
+				<div class="headline">
+				<h2>힌트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				<p><img alt="" src="/upload/images/pave.png" style="height:282px; width:334px" /></p>
+
+<p>위의 그림은 예제를 그래프로 나타낸 것이다. 굵은 도로는 포장된 도로이다.</p>
+
+<p><img alt="" src="/upload/images/pave2.png" style="height:158px; width:905px" /></p>
+
+<p>상근이와 선영이의 훈련 조건을 만족 시키는 경로는 위와 같이 다섯 가지가 있다. 만약, 도로 1-3, 3-5, 2-5를 폭파시킨다면, 상근이와 선영이는 훈련을 할 수 없다. 이때, 총 폭파 비용은 5이다.</p>
+
+<p>도로 2-4와 2-5를 폭파시켜도 된다. 하지만, 총 폭파 비용이 6이 된다.&nbsp;</p>
+
+				</div>
+				</section>
+			</div>
+							<div style="display: none;">
+					<div id="problem-lang-base64">W3sicHJvYmxlbV9pZCI6IjU0NzciLCJwcm9ibGVtX2xhbmciOiIwIiwidGl0bGUiOiJcdWI5YzhcdWI3N2NcdWQxYTQgXHVkNmM4XHViODI4IFx1YmMyOVx1ZDU3NFx1ZDU1OFx1YWUzMCIsImRlc2NyaXB0aW9uIjoiPHA+XHVjMGMxXHVhZGZjXHVjNzc0XHVjNjQwIFx1YzEyMFx1YzYwMVx1Yzc3NFx1YjI5NCBcdWJjZjRcdWMyYTRcdWQxMzQgXHViOWM4XHViNzdjXHVkMWE0XHVjNWQwIFx1Y2MzOFx1YWMwMFx1ZDU1OFx1YWUzMCBcdWM3MDRcdWQ1NzQgXHVjNWY0XHVjMmVjXHVkNzg4IFx1ZDZjOFx1YjgyOFx1ZDU1OFx1YWNlMCBcdWM3ODhcdWIyZTQuIFx1YjMwMFx1ZDY4Y1x1YWMwMCBcdWM1YmNcdWI5YzggXHViMGE4XHVjOWMwIFx1YzU0YVx1YzU1OFx1YWUzMCBcdWI1NGNcdWJiMzhcdWM1ZDAsIFx1YzYyNFx1YjI5OFx1Yzc0MCBcdWQ2YzhcdWI4MjggXHVhY2M0XHVkNjhkXHVjNzQ0IFx1YzEzOFx1YzZjY1x1YmNmNFx1YjgyNFx1YWNlMCBcdWQ1NWNcdWIyZTQuPFwvcD5cclxuXHJcbjxwPlx1YjQ1MCBcdWMwYWNcdWI3OGNcdWM3NzQgXHVjMGI0XHVhY2UwXHVjNzg4XHViMjk0IFx1YjA5OFx1Yjc3Y1x1YzVkMFx1YjI5NCBcdWIzYzRcdWMyZGNcdWFjMDAgTlx1YWMxYywgXHViM2M0XHViODVjXHVhYzAwIE1cdWFjMWMgXHVjNzg4XHViMmU0LiBcdWJhYThcdWI0ZTAgXHViM2M0XHViODVjXHViMjk0IFx1YjQ1MCBcdWIzYzRcdWMyZGNcdWI5N2MgXHVjNWYwXHVhY2IwXHVkNTU4XHViYTcwLCBcdWM1OTFcdWJjMjlcdWQ1YTVcdWM3M2NcdWI4NWMgXHVjNzc0XHViM2Q5XHVkNTYwIFx1YzIxOCBcdWM3ODhcdWIyZTQuIFx1YjNjNFx1Yjg1YyBcdWM5MTFcdWM1ZDBcdWMxMWMgTi0xXHVhYzFjXHViMjk0IFx1ZDNlY1x1YzdhNVx1YjQxOFx1YzViNCBcdWM3ODhcdWFjZTAsIFx1YjA5OFx1YmEzOFx1YzljMFx1YjI5NCBcdWQzZWNcdWM3YTVcdWI0MThcdWM1YjQgXHVjNzg4XHVjOWMwIFx1YzU0YVx1YjJlNC48XC9wPlxyXG5cclxuPHA+XHVkNTVjIFx1YjNjNFx1YzJkY1x1YzVkMFx1YzExYyBcdWIyZTRcdWI5NzggXHViM2M0XHVjMmRjXHViODVjIFx1Yzc3NFx1YjNkOVx1ZDU2MCBcdWI1NGMsIFx1ZDU2ZFx1YzBjMSBcdWQzZWNcdWM3YTVcdWI0MWMgXHViM2M0XHViODVjXHViOWNjXHVjNzQ0IFx1YzBhY1x1YzZhOVx1ZDU3NFx1YzExYyBcdWM3NzRcdWIzZDlcdWQ1NjAgXHVjMjE4IFx1Yzc4OFx1YjJlNC4gXHVjOTg5LCBOXHVhYzFjXHVjNzU4IFx1YjNjNFx1YzJkY1x1YzY0MCBOLTFcdWFjMWNcdWM3NTggXHVkM2VjXHVjN2E1XHViNDFjIFx1YjNjNFx1Yjg1Y1x1YjI5NCBcdWQyYjhcdWI5YWMgXHVhZDZjXHVjODcwXHViOTdjIFx1Yzc3NFx1YjhlOFx1YWNlMCBcdWM3ODhcdWIyZTQuPFwvcD5cclxuXHJcbjxwPlx1YjYxMCwgXHVkNTVjIFx1YjNjNFx1YzJkY1x1YzY0MCBcdWM1ZjBcdWFjYjBcdWI0MThcdWM1YjQgXHVjNzg4XHViMjk0IFx1YjNjNFx1Yjg1Y1x1YjI5NCBcdWNkNWNcdWIzMDAgMTBcdWFjMWNcdWM3NzRcdWIyZTQuPFwvcD5cclxuXHJcbjxwPlx1YjljOFx1Yjc3Y1x1ZDFhNCBcdWQ2YzhcdWI4MjhcdWM3NDAgXHViM2M0XHVjMmRjXHVjNWQwXHVjMTFjIFx1YzJkY1x1Yzc5MVx1ZDU3NFx1YzExYywgXHViM2M0XHViODVjXHViOTdjIFx1YjNjY1x1YzU0NFx1YjJlNFx1YjJjYyBcdWIyZTRcdWM3NGMsIFx1YzJkY1x1Yzc5MVx1ZDU1YyBcdWIzYzRcdWMyZGNcdWI4NWMgXHViMmU0XHVjMmRjIFx1YjNjY1x1YzU0NFx1YzY0MFx1YzExYyBcdWIwNWRcdWIwOWNcdWIyZTQuIFx1YzBjMVx1YWRmY1x1Yzc3NFx1YzY0MCBcdWMxMjBcdWM2MDFcdWM3NzRcdWIyOTQgXHVkNmM4XHViODI4XHVkNTU4XHViYTc0XHVjMTFjIFx1YzU0NFx1Yjk4NFx1YjJlNFx1YzZiNCBcdWQ0OGRcdWFjYmRcdWIzYzQgXHVhYzEwXHVjMGMxXHVkNTU4XHViODI0XHVhY2UwIFx1ZDU1Y1x1YjJlNC4gXHViNTMwXHViNzdjXHVjMTFjLCBcdWFkZjhcdWI0ZTRcdWM3NDAgXHVjNzc0XHViYmY4IFx1YzljMFx1YjA5OFx1YWMwNCBcdWIzYzRcdWMyZGNcdWI5N2MgXHViMmU0XHVjMmRjIFx1YzljMFx1YjA5OFx1YWMwMFx1YzljMCBcdWM1NGFcdWM3NDQgXHVhYzgzXHVjNzc0XHVhY2UwLCBcdWM5YzBcdWIwOWMgXHViM2M0XHViODVjXHViM2M0IFx1YjJlNFx1YzJkYyBcdWM5YzBcdWIwOThcdWM5YzAgXHVjNTRhXHVjNzQ0IFx1YWM4M1x1Yzc3NFx1YjJlNC48XC9wPlxyXG5cclxuPHA+XHVkNmM4XHViODI4XHVjNzQ0IFx1YzJkY1x1Yzc5MSBcdWQ1NThcdWIyOTQgXHViM2M0XHVjMmRjXHViMjk0IFx1YzViNFx1YjI5MFx1YWNmM1x1Yzc3NCBcdWI0MThcdWM1YjRcdWIzYzQgXHVjMGMxXHVhZDAwXHVjNWM2XHVhY2UwLCBcdWJhYThcdWI0ZTAgXHViM2M0XHVjMmRjXHViOTdjIFx1YmMyOVx1YmIzOFx1ZDU1OFx1YzljMCBcdWM1NGFcdWM1NDRcdWIzYzQgXHViNDFjXHViMmU0LjxcL3A+XHJcblxyXG48cD5cdWI0YTRcdWM1ZDBcdWMxMWMgXHViMmVjXHViOWFjXHViMjk0IFx1YWM4M1x1Yzc3NCBcdWM1NWVcdWM1ZDBcdWMxMWMgXHViMmVjXHViOWFjXHViMjk0IFx1YWM4M1x1YmNmNFx1YjJlNCBcdWIzNTQgXHVkM2I4XHVkNTU4XHViMmU0LiBcdWFkZjggXHVjNzc0XHVjNzIwXHViMjk0IFx1YzU1ZVx1YzVkMFx1YzExYyBcdWIyZWNcdWI5YWNcdWIyOTQgXHVjMGFjXHViNzhjXHVjNzc0IFx1YmMxNFx1Yjc4Y1x1Yzc0NCBcdWI5YzlcdWM1NDRcdWM4ZmNcdWFlMzAgXHViNTRjXHViYjM4XHVjNzc0XHViMmU0LiBcdWI1MzBcdWI3N2NcdWMxMWMsIFx1YzBjMVx1YWRmY1x1Yzc3NFx1YzY0MCBcdWMxMjBcdWM2MDFcdWM3NzRcdWIyOTQgXHViM2M0XHVjMmRjXHVjNWQwIFx1YjRlNFx1YzViNFx1YWMwOCBcdWI1NGMgXHViOWM4XHViMmU0IFx1Yzc5MFx1YjlhY1x1Yjk3YyBcdWMxMWNcdWI4NWMgXHViYzE0XHVhZmMwIFx1YWM4M1x1Yzc3NFx1YjJlNC4gXHViNjEwLCBcdWMxMWNcdWI4NWMgXHVkNmM4XHViODI4XHVkNTVjIFx1YzU5MVx1Yzc3NCBcdWFjMTlcdWM1NDRcdWM1N2MgXHVkNTU4XHVhZTMwIFx1YjU0Y1x1YmIzOFx1YzVkMCBcdWM5ZGRcdWMyMTggXHVhYzFjXHVjNzU4IFx1YjNjNFx1Yjg1Y1x1Yjk3YyBcdWM5YzBcdWIwOThcdWI4MjRcdWFjZTAgXHVkNTVjXHViMmU0LjxcL3A+XHJcblxyXG48cD5cdWMwYzFcdWFkZmNcdWM3NzRcdWM2NDAgXHVjMTIwXHVjNjAxXHVjNzc0XHVjNzU4IFx1YWNiZFx1YzdjMVx1Yzc5MCBcdWMwYzFcdWIzNTVcdWM3NzRcdWM2NDAgXHVkNzZjXHVjNmQwXHVjNzc0XHViMjk0IFx1YzcwNFx1Yzc1OCBcdWM4NzBcdWFjNzRcdWM3NDQgXHViOWNjXHVjODcxXHVjMmRjXHVkMGE0XHViMjk0IFx1YWNiZFx1Yjg1Y1x1Yjk3YyBcdWM1YzZcdWM1NjBcdWFlMzAgXHVjNzA0XHVkNTc0IFx1ZDNlY1x1YzdhNVx1YjQxOFx1YzViNCBcdWM3ODhcdWM5YzAgXHVjNTRhXHVjNzQwIFx1YjNjNFx1Yjg1Y1x1Yzc1OCBcdWM3N2NcdWJkODBcdWI5N2MgXHVkM2VkXHVkMzBjXHVjMmRjXHVkMGE0XHVhZTMwXHViODVjIFx1ZDU4OFx1YjJlNC4gXHVhYzAxXHVhYzAxXHVjNzU4IFx1ZDNlY1x1YzdhNVx1YjQxOFx1YzViNCBcdWM3ODhcdWM5YzAgXHVjNTRhXHVjNzQwIFx1YjNjNFx1Yjg1Y1x1Yjk3YyBcdWQzZWRcdWQzMGNcdWMyZGNcdWQwYTRcdWIyOTQgXHViZTQ0XHVjNmE5XHVjNzQwIFx1Yzc4NVx1YjgyNVx1YzczY1x1Yjg1YyBcdWM4ZmNcdWM1YjRcdWM5YzRcdWIyZTQuIChcdWJlNDRcdWM2YTlcdWM3NDAgXHVjNTkxXHVjMjE4KSBcdWI2MTAsIFx1ZDNlY1x1YzdhNVx1YjQxYyBcdWIzYzRcdWI4NWNcdWIyOTQgXHVkM2VkXHVkMzBjXHVjMmRjXHVkMGFjIFx1YzIxOCBcdWM1YzZcdWIyZTQuPFwvcD5cclxuXHJcbjxwPlx1YjNjNFx1YzJkY1x1YzY0MCBcdWIzYzRcdWI4NWMgXHViMTI0XHVkMmI4XHVjNmNjXHVkMDZjXHVhYzAwIFx1YzhmY1x1YzViNFx1Yzg0Y1x1Yzc0NCBcdWI1NGMsIFx1YzBjMVx1YWRmY1x1Yzc3NFx1YzY0MCBcdWMxMjBcdWM2MDFcdWM3NzRcdWM3NTggXHVkNmM4XHViODI4IFx1Yzg3MFx1YWM3NFx1Yzc0NCBcdWI5Y2NcdWM4NzFcdWMyZGNcdWQwYTRcdWIyOTQgXHVhY2JkXHViODVjXHVhYzAwIFx1YzVjNlx1YWM4Y1x1ZDU1OFx1YWUzMCBcdWM3MDRcdWQ1NzRcdWMxMWMgXHVkNTQ0XHVjNjk0XHVkNTVjIFx1ZDNlZFx1ZDMwYyBcdWJlNDRcdWM2YTlcdWM3NTggXHVjZDVjXHVjMTlmXHVhYzEyXHVjNzQ0IFx1YWQ2Y1x1ZDU1OFx1YjI5NCBcdWQ1MDRcdWI4NWNcdWFkZjhcdWI3YThcdWM3NDQgXHVjNzkxXHVjMTMxXHVkNTU4XHVjMmRjXHVjNjI0LjxcL3A+XHJcbiIsImlucHV0IjoiPHA+XHVjY2FiXHVjOWY4IFx1YzkwNFx1YzVkMCBcdWIzYzRcdWMyZGNcdWM3NTggXHVjMjE4IE5cdWFjZmMgXHViM2M0XHViODVjXHVjNzU4IFx1YzIxOCBNXHVjNzc0IFx1YzhmY1x1YzViNFx1YzljNFx1YjJlNC4gKDIgJmxlOyBOICZsZTsgMSwwMDAsIE4tMSAmbGU7IE0gJmxlOyA1LDAwMCk8XC9wPlxyXG5cclxuPHA+XHViMmU0XHVjNzRjIE1cdWFjMWMgXHVjOTA0XHVjNWQwXHViMjk0IEEsIEIsIENcdWFjMDAgXHVjOGZjXHVjNWI0XHVjOWM0XHViMmU0LiAoMSAmbGU7IEEsIEIgJmxlOyBOLCAwICZsZTsgQyAmbGU7IDEwLDAwMCkgQVx1YzY0MCBCXHViMjk0IFx1YzExY1x1Yjg1YyBcdWIyZTRcdWI5NzRcdWJhNzAsIFx1YjNjNFx1Yjg1Y1x1YWMwMCBcdWM1ZjBcdWFjYjBcdWQ1NThcdWIyOTQgXHViM2M0XHVjMmRjXHViOTdjIFx1YjA5OFx1ZDBjMFx1YjBiOFx1YjJlNC4gQ1x1YWMwMCAwXHVjNzc4IFx1YWNiZFx1YzZiMFx1YjI5NCBcdWQzZWNcdWM3YTVcdWI0MWMgXHViM2M0XHViODVjXHVjNzc0XHViMmU0LiBcdWQzZWNcdWM3YTVcdWI0MThcdWM1YjQgXHVjNzg4XHVjOWMwIFx1YzU0YVx1Yzc0MCBcdWIzYzRcdWI4NWNcdWM3NzggXHVhY2JkXHVjNmIwXHVjNWQwXHViMjk0IENcdWFjMTJcdWM3NzQgXHVjNTkxXHVjMjE4XHVjNzc0XHViYTcwLCBcdWM3NzQgXHVhYzEyXHVjNzQwIFx1YWRmOCBcdWIzYzRcdWI4NWNcdWI5N2MgXHVkM2VkXHVkMzBjXHVjMmRjXHVkMGE0XHViMjk0XHViMzcwIFx1ZDU0NFx1YzY5NFx1ZDU1YyBcdWJlNDRcdWM2YTlcdWM3NzRcdWIyZTQuPFwvcD5cclxuXHJcbjxwPlx1YmFhOFx1YjRlMCBcdWIzYzRcdWMyZGNcdWIyOTQgXHViOWNlXHVjNTQ0XHVjNTdjIDEwXHVhYzFjIFx1YjNjNFx1Yjg1Y1x1YzY0MCBcdWM1ZjBcdWFjYjBcdWI0MThcdWM1YjRcdWM4MzggXHVjNzg4XHViMmU0LiBcdWI2MTAsIFx1ZDU1YyBcdWIzYzRcdWMyZGMgXHVjMzBkXHVjNzQ0IFx1YzVmMFx1YWNiMFx1ZDU1OFx1YjI5NCBcdWIzYzRcdWI4NWNcdWIyOTQgXHVkNTVjIFx1YWMxY1x1Yjk3YyBcdWIxMThcdWM5YzAgXHVjNTRhXHViMjk0XHViMmU0LjxcL3A+XHJcbiIsIm91dHB1dCI6IjxwPlx1Y2NhYlx1YzlmOCBcdWM5MDRcdWM1ZDAgXHVjMGMxXHVhZGZjXHVjNzc0XHVjNjQwIFx1YzEyMFx1YzYwMVx1Yzc3NFx1Yzc1OCBcdWQ2YzhcdWI4MjggXHVjODcwXHVhYzc0XHVjNzQ0IFx1YjljY1x1Yzg3MVx1YzJkY1x1ZDBhNFx1YjI5NCBcdWFjYmRcdWI4NWNcdWI5N2MgXHVjNWM2XHVjNTYwXHVhZTMwIFx1YzcwNFx1ZDU1YyBcdWQzZWRcdWQzMGMgXHViZTQ0XHVjNmE5XHVjNzU4IFx1Y2Q1Y1x1YzE5Zlx1YWMxMlx1Yzc0NCBcdWNkOWNcdWI4MjVcdWQ1NWNcdWIyZTQuPFwvcD5cclxuIiwiaGludCI6IjxwPjxpbWcgYWx0PVwiXCIgc3JjPVwiXC91cGxvYWRcL2ltYWdlc1wvcGF2ZS5wbmdcIiBzdHlsZT1cImhlaWdodDoyODJweDsgd2lkdGg6MzM0cHhcIiBcLz48XC9wPlxyXG5cclxuPHA+XHVjNzA0XHVjNzU4IFx1YWRmOFx1YjliY1x1Yzc0MCBcdWM2MDhcdWM4MWNcdWI5N2MgXHVhZGY4XHViNzk4XHVkNTA0XHViODVjIFx1YjA5OFx1ZDBjMFx1YjBiOCBcdWFjODNcdWM3NzRcdWIyZTQuIFx1YWQ3NVx1Yzc0MCBcdWIzYzRcdWI4NWNcdWIyOTQgXHVkM2VjXHVjN2E1XHViNDFjIFx1YjNjNFx1Yjg1Y1x1Yzc3NFx1YjJlNC48XC9wPlxyXG5cclxuPHA+PGltZyBhbHQ9XCJcIiBzcmM9XCJcL3VwbG9hZFwvaW1hZ2VzXC9wYXZlMi5wbmdcIiBzdHlsZT1cImhlaWdodDoxNThweDsgd2lkdGg6OTA1cHhcIiBcLz48XC9wPlxyXG5cclxuPHA+XHVjMGMxXHVhZGZjXHVjNzc0XHVjNjQwIFx1YzEyMFx1YzYwMVx1Yzc3NFx1Yzc1OCBcdWQ2YzhcdWI4MjggXHVjODcwXHVhYzc0XHVjNzQ0IFx1YjljY1x1Yzg3MSBcdWMyZGNcdWQwYTRcdWIyOTQgXHVhY2JkXHViODVjXHViMjk0IFx1YzcwNFx1YzY0MCBcdWFjMTlcdWM3NzQgXHViMmU0XHVjMTJmIFx1YWMwMFx1YzljMFx1YWMwMCBcdWM3ODhcdWIyZTQuIFx1YjljY1x1YzU3ZCwgXHViM2M0XHViODVjIDEtMywgMy01LCAyLTVcdWI5N2MgXHVkM2VkXHVkMzBjXHVjMmRjXHVkMGE4XHViMmU0XHViYTc0LCBcdWMwYzFcdWFkZmNcdWM3NzRcdWM2NDAgXHVjMTIwXHVjNjAxXHVjNzc0XHViMjk0IFx1ZDZjOFx1YjgyOFx1Yzc0NCBcdWQ1NjAgXHVjMjE4IFx1YzVjNlx1YjJlNC4gXHVjNzc0XHViNTRjLCBcdWNkMWQgXHVkM2VkXHVkMzBjIFx1YmU0NFx1YzZhOVx1Yzc0MCA1XHVjNzc0XHViMmU0LjxcL3A+XHJcblxyXG48cD5cdWIzYzRcdWI4NWMgMi00XHVjNjQwIDItNVx1Yjk3YyBcdWQzZWRcdWQzMGNcdWMyZGNcdWNmMWNcdWIzYzQgXHViNDFjXHViMmU0LiBcdWQ1NThcdWM5YzBcdWI5Y2MsIFx1Y2QxZCBcdWQzZWRcdWQzMGMgXHViZTQ0XHVjNmE5XHVjNzc0IDZcdWM3NzQgXHViNDFjXHViMmU0LiZuYnNwOzxcL3A+XHJcbiIsIm9yaWdpbmFsIjoiMCIsImh0bWxfdGl0bGUiOiIwIiwicHJvYmxlbV9sYW5nX3Rjb2RlIjoiS29yZWFuIn0seyJwcm9ibGVtX2lkIjoiNTQ3NyIsInByb2JsZW1fbGFuZyI6IjEiLCJ0aXRsZSI6IlRSQUlOSU5HIiwiZGVzY3JpcHRpb24iOiI8cD5NaXJrbyBhbmQgU2xhdmtvIGFyZSB0cmFpbmluZyBoYXJkIGZvciB0aGUgYW5udWFsIHRhbmRlbSBjeWNsaW5nIG1hcmF0aG9uIHRha2luZyBwbGFjZSBpbiBDcm9hdGlhLiBUaGV5IG5lZWQgdG8gY2hvb3NlIGEgcm91dGUgdG8gdHJhaW4gb24uJm5ic3A7PFwvcD5cclxuXHJcbjxwPlRoZXJlIGFyZSBOIGNpdGllcyBhbmQgTSByb2FkcyBpbiB0aGVpciBjb3VudHJ5LiBFdmVyeSByb2FkIGNvbm5lY3RzIHR3byBjaXRpZXMgYW5kIGNhbiBiZSB0cmF2ZXJzZWQgaW4gYm90aCBkaXJlY3Rpb25zLiBFeGFjdGx5IE4mbWludXM7MSBvZiB0aG9zZSByb2FkcyBhcmUgcGF2ZWQsIHdoaWxlIHRoZSByZXN0IG9mIHRoZSByb2FkcyBhcmUgdW5wYXZlZCB0cmFpbHMuIEZvcnR1bmF0ZWx5LCB0aGUgbmV0d29yayBvZiByb2FkcyB3YXMgZGVzaWduZWQgc28gdGhhdCBlYWNoIHBhaXIgb2YgY2l0aWVzIGlzIGNvbm5lY3RlZCBieSBhIHBhdGggY29uc2lzdGluZyBvZiBwYXZlZCByb2Fkcy4gSW4gb3RoZXIgd29yZHMsIHRoZSBOIGNpdGllcyBhbmQgdGhlIE4mbWludXM7MSBwYXZlZCByb2FkcyBmb3JtIGEgdHJlZSBzdHJ1Y3R1cmUuJm5ic3A7PFwvcD5cclxuXHJcbjxwPkFkZGl0aW9uYWxseSwgZWFjaCBjaXR5IGlzIGFuIGVuZHBvaW50IGZvciBhdCBtb3N0IDEwIHJvYWRzIHRvdGFsLiZuYnNwOzxcL3A+XHJcblxyXG48cD5BIHRyYWluaW5nIHJvdXRlIHN0YXJ0cyBpbiBzb21lIGNpdHksIGZvbGxvd3Mgc29tZSByb2FkcyBhbmQgZW5kcyBpbiB0aGUgc2FtZSBjaXR5IGl0IHN0YXJ0ZWQgaW4uIE1pcmtvIGFuZCBTbGF2a28gbGlrZSB0byBzZWUgbmV3IHBsYWNlcywgc28gdGhleSBtYWRlIGEgcnVsZSBuZXZlciB0byBnbyB0aHJvdWdoIHRoZSBzYW1lIGNpdHkgbm9yIHRyYXZlbCB0aGUgc2FtZSByb2FkIHR3aWNlLiBUaGUgdHJhaW5pbmcgcm91dGUgbWF5IHN0YXJ0IGluIGFueSBjaXR5IGFuZCBkb2VzIG5vdCBuZWVkIHRvIHZpc2l0IGV2ZXJ5IGNpdHkuJm5ic3A7PFwvcD5cclxuXHJcbjxwPlJpZGluZyBpbiB0aGUgYmFjayBzZWF0IGlzIGVhc2llciwgc2luY2UgdGhlIHJpZGVyIGlzIHNoaWVsZGVkIGZyb20gdGhlIHdpbmQgYnkgdGhlIHJpZGVyIGluIHRoZSBmcm9udC4gQmVjYXVzZSBvZiB0aGlzLCBNaXJrbyBhbmQgU2xhdmtvIGNoYW5nZSBzZWF0cyBpbiBldmVyeSBjaXR5LiBUbyBlbnN1cmUgdGhhdCB0aGV5IGdldCB0aGUgc2FtZSBhbW91bnQgb2YgdHJhaW5pbmcsIHRoZXkgbXVzdCBjaG9vc2UgYSByb3V0ZSB3aXRoIGFuIGV2ZW4gbnVtYmVyIG9mIHJvYWRzLiZuYnNwOzxcL3A+XHJcblxyXG48cD5NaXJrbyBhbmQgU2xhdmtvJiMzOTtzIGNvbXBldGl0b3JzIGRlY2lkZWQgdG8gYmxvY2sgc29tZSBvZiB0aGUgdW5wYXZlZCByb2FkcywgbWFraW5nIGl0IGltcG9zc2libGUgZm9yIHRoZW0gdG8gZmluZCBhIHRyYWluaW5nIHJvdXRlIHNhdGlzZnlpbmcgdGhlIGFib3ZlIHJlcXVpcmVtZW50cy4gRm9yIGVhY2ggdW5wYXZlZCByb2FkIHRoZXJlIGlzIGEgY29zdCAoYSBwb3NpdGl2ZSBpbnRlZ2VyKSBhc3NvY2lhdGVkIHdpdGggYmxvY2tpbmcgdGhlIHJvYWQuIEl0IGlzIGltcG9zc2libGUgdG8gYmxvY2sgcGF2ZWQgcm9hZHMuJm5ic3A7PFwvcD5cclxuXHJcbjxwPldyaXRlIGEgcHJvZ3JhbSB0aGF0LCBnaXZlbiB0aGUgZGVzY3JpcHRpb24gb2YgdGhlIG5ldHdvcmsgb2YgY2l0aWVzIGFuZCByb2FkcywgZmluZHMgdGhlIHNtYWxsZXN0IHRvdGFsIGNvc3QgbmVlZGVkIHRvIGJsb2NrIHRoZSByb2FkcyBzbyB0aGF0IG5vIHRyYWluaW5nIHJvdXRlIGV4aXN0cyBzYXRpc2Z5aW5nIHRoZSBhYm92ZSByZXF1aXJlbWVudHMuJm5ic3A7PFwvcD5cclxuIiwiaW5wdXQiOiI8cD5UaGUgZmlyc3QgbGluZSBvZiBpbnB1dCBjb250YWlucyB0d28gaW50ZWdlcnMgTiBhbmQgTSAoMiAmbGU7IE4gJmxlOyAxIDAwMCwgTiZtaW51czsxICZsZTsgTSAmbGU7IDUgMDAwKSwgdGhlIG51bWJlciBvZiBjaXRpZXMgYW5kIHRoZSB0b3RhbCBudW1iZXIgb2Ygcm9hZHMuJm5ic3A7PFwvcD5cclxuXHJcbjxwPkVhY2ggb2YgdGhlIGZvbGxvd2luZyBNIGxpbmVzIGNvbnRhaW5zIHRocmVlIGludGVnZXJzIEEsIEIgYW5kIEMgKDEgJmxlOyBBICZsZTsgTiwgMSAmbGU7IEIgJmxlOyBOLCAwICZsZTsgQyAmbGU7IDEwIDAwMCksIGRlc2NyaWJpbmcgb25lIHJvYWQuIFRoZSBudW1iZXJzIEEgYW5kIEIgYXJlIGRpZmZlcmVudCBhbmQgdGhleSByZXByZXNlbnQgdGhlIGNpdGllcyBkaXJlY3RseSBjb25uZWN0ZWQgYnkgdGhlIHJvYWQuIElmIEM9MCwgdGhlIHJvYWQgaXMgcGF2ZWQ7IG90aGVyd2lzZSwgdGhlIHJvYWQgaXMgdW5wYXZlZCBhbmQgQyByZXByZXNlbnRzIHRoZSBjb3N0IG9mIGJsb2NraW5nIGl0LiZuYnNwOzxcL3A+XHJcblxyXG48cD5FYWNoIGNpdHkgaXMgYW4gZW5kcG9pbnQgZm9yIGF0IG1vc3QgMTAgcm9hZHMuIFRoZXJlIHdpbGwgbmV2ZXIgYmUgbW9yZSB0aGFuIG9uZSByb2FkIGRpcmVjdGx5IGNvbm5lY3RpbmcgYSBzaW5nbGUgcGFpciBvZiBjaXRpZXMuJm5ic3A7PFwvcD5cclxuIiwib3V0cHV0IjoiPHA+T3V0cHV0IHNob3VsZCBjb25zaXN0IG9mIGEgc2luZ2xlIGludGVnZXIsIHRoZSBzbWFsbGVzdCB0b3RhbCBjb3N0IGFzIGRlc2NyaWJlZCBpbiB0aGUgcHJvYmxlbSBzdGF0ZW1lbnQuJm5ic3A7PFwvcD5cclxuIiwiaGludCI6IjxwPjxpbWcgYWx0PVwiXCIgc3JjPVwiXC91cGxvYWRcL2ltYWdlc1wvcGF2ZS5wbmdcIiBzdHlsZT1cImhlaWdodDoyODJweDsgb3BhY2l0eTowLjk7IHdpZHRoOjMzNHB4XCIgXC8+PFwvcD5cclxuXHJcbjxwPlRoZSBsYXlvdXQgb2YgdGhlIHJvYWRzIGFuZCBjaXRpZXMgaW4gdGhlIGZpcnN0IGV4YW1wbGUuIFBhdmVkIHJvYWRzIGFyZSBzaG93biBpbiBib2xkLiZuYnNwOzxcL3A+XHJcblxyXG48cD48aW1nIGFsdD1cIlwiIHNyYz1cIlwvdXBsb2FkXC9pbWFnZXNcL3BhdmUyLnBuZ1wiIHN0eWxlPVwiaGVpZ2h0OjE1OHB4OyB3aWR0aDo5MDVweFwiIFwvPjxcL3A+XHJcblxyXG48cD5UaGVyZSBhcmUgZml2ZSBwb3NzaWJsZSByb3V0ZXMgZm9yIE1pcmtvIGFuZCBTbGF2a28uIElmIHRoZSByb2FkcyAxLTMsIDMtNSBhbmQgMi01IGFyZSBibG9ja2VkLCB0aGVuIE1pcmtvIGFuZCBTbGF2a28gY2Fubm90IHVzZSBhbnkgb2YgdGhlIGZpdmUgcm91dGVzLiBUaGUgY29zdCBvZiBibG9ja2luZyB0aGVzZSB0aHJlZSByb2FkcyBpcyA1LiZuYnNwOzxcL3A+XHJcblxyXG48cD5JdCBpcyBhbHNvIHBvc3NpYmxlIHRvIGJsb2NrIGp1c3QgdHdvIHJvYWRzLCAyLTQgYW5kIDItNSwgYnV0IHRoaXMgd291bGQgcmVzdWx0IGluIGEgaGlnaGVyIGNvc3Qgb2YgNi48XC9wPlxyXG4iLCJvcmlnaW5hbCI6IjEiLCJodG1sX3RpdGxlIjoiMCIsInByb2JsZW1fbGFuZ190Y29kZSI6IkVuZ2xpc2gifV0=</div>
+				</div>
+								</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="/category/2">Olympiad</a>&nbsp;&gt;&nbsp;<a href="/category/99">International Olympiad in Informatics</a>&nbsp;&gt;&nbsp;<a href="/category/557">IOI 2007</a>&nbsp;&gt;&nbsp;<a href="/category/detail/2636">Day 2</a>&nbsp;6번</p><ul><li>문제를 번역한 사람:&nbsp;<a href="/user/baekjoon">baekjoon</a></li></ul></section></div>
+																											</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F5477">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F5477">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script type="text/javascript">
+	var problem_lang = 0;
+	var subtask_table = 0;
+	var keys = $('.problem-section').map(function(_,el) {
+		return $(el).attr('id');
+	}).get();
+	$(function() {
+		var language_change = function(lang) {
+			$('#lang-select-button > .lang-select-text').text($('a.language-select-link[data-language-id='+lang+'] span.lang-text').text());
+			var check = {};
+			for (var i=0; i<keys.length; i++) {
+				var key = keys[i];
+				check[key] = false;
+			}
+			for (key in problem_langs[lang]) {
+				if (problem_langs[lang][key].length > 0) {
+					if (key == 'title') {
+						$('#problem_'+key).text(problem_langs[lang][key]);
+					} else {
+						$('#problem_'+key).html(problem_langs[lang][key]);
+					}
+					if (subtask_table && key.startsWith('subtask')) {
+						var subtask_id = parseInt(key.substring(7));
+						$('#problem_subtask table.subtask-table tr[data-subtask-id="'+subtask_id+'"] td.subtask-body').html(problem_langs[lang][key]);
+						check['subtask'] = true;
+					}
+					$('#'+key).show();
+					check[key] = true;
+				}
+			}
+			for (var i=0; i<keys.length; i++) {
+				var key = keys[i];
+				if (check[key] == false) {
+					$('#'+key).hide();
+				}
+			}
+			$("title").text("5477번: " + problem_langs[lang]['title']);
+			MathJax.typeset();
+			if (lang == 0) {
+				$('#original-diff').hide();
+			} else {
+				$('#original-diff').show();
+			}
+			update_image_responsive();
+		};
+		var temp = JSON.parse(atob($('#problem-lang-base64').html()));
+		var problem_langs = {};
+		for (var i=0; i<temp.length; i++) {
+			problem_langs[parseInt(temp[i]['problem_lang'])] = temp[i];
+		}
+		$('.language-select-link').click(function(e) {
+			e.preventDefault();
+			var lang = parseInt($(this).attr('data-language-id'));
+			if (lang != problem_lang && (lang in problem_langs) && problem_langs[lang]) {
+				problem_lang = lang;
+				language_change(lang);
+			}
+		});
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+
+</body>
+</html>

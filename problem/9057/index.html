@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>9057번: ACM-UCPC</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="9057">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F9057">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F9057' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/9057">9057번</a>
+</li><li><a href="/submit/9057"  >제출</a></li><li><a href="/problem/status/9057"  >맞힌 사람</a></li><li><a href="/short/status/9057"  >숏코딩</a></li><li><a href="/problem/history/9057"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=9057"  >채점 현황</a></li><li><a href="/board/search/all/problem/9057"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	9057번
+ - </span><span id="problem_title">ACM-UCPC</span>
+								<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>1 초 </td><td>128 MB</td><td>103</td><td>58</td><td>44</td><td>70.968%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>2020 년 우주 IT 인재들을 발굴, 육성하고 IT 인재들의 중요성을 인식하는 분위기 조성을 위하여 태양계의 지구 전산학 학회인 ACM(Association for Computing Machinery)에서는 대학생들을 대상으로 프로그래밍 경시대회 ACM-UCPC(Universal Collegiate Programming Contest)를 개최한다. 시간과 장소의 제약으로 인터넷 예선을 치르게 되었다.</p>
+
+<p>예선을 치른 후 각 팀의 성적이 푼 문제 수와 페널티로 주어지는데, 더 많은 문제를 푼 팀이 성적 순위에서 앞서고 같은 수의 문제를 풀었을 때에는 페널티가 적은 팀이 순위에서 앞선다. 순위대로 정렬된 대회 결과가 주어졌을 때 총 60 팀을 선발하는 프로그램을 작성하시오. 단, 어떤 두 팀도 같은 순위가 없다.</p>
+
+<p>성적이 우수한 팀을 뽑되 각 학교의 참여도를 높이고, 한 학교에서 너무 많은 수의 팀이 선발되는 것을 피하기 위해서 성적이 우수한 순서대로 아래 1~5 의 규칙을 적용하여 선발 혹은 탈락을 결정한다.</p>
+
+<ol>
+	<li>현재 고려하는 팀이 속한 학교에서 M 개의 팀이 참여했다면 최대 &lceil;M/2&rceil; (올림)개 팀이 선발된다. 예를 들어 2 개 팀이 참여했다면 최대 1 팀이, 3 개 팀이 참여했다면 최대 2 팀이 선발된다.</li>
+	<li>현재 고려하는 팀이 전체 성적이 1 위 ~ 10 위이면, 같은 학교에서 지금까지 3 개 이하의 팀이 선발되었을 경우에만 선발된다.</li>
+	<li>현재 고려하는 팀이 전체 성적이 11 위 ~ 20 위이면, 같은 학교에서 지금까지 2 개 이하의 팀이 선발되었을 경우에만 선발된다.</li>
+	<li>현재 고려하는 팀이 전체 성적이 21 위 ~ 30 위이면, 같은 학교에서 지금까지 1 개 이하의 팀이 선발되었을 경우에만 선발된다.</li>
+	<li>현재 고려하는 팀이 전체 성적 31 위 이하이면, 같은 학교에서 지금까지 한 팀도 선발되지 않았을 경우에만 선발된다.</li>
+</ol>
+
+<p>단, 위의 규칙대로 선발해서 60 팀을 채우지 못할 경우에는 선발되지 못한 팀들 중 성적 순위가 앞선 팀을 차례대로 선발해서 60 팀을 채운다. 참가 팀의 수가 60 팀이 안 될 때에는 모든 팀을 선발한다.&nbsp;</p>
+
+				</div>
+				</section>
+			</div>
+										<div class="col-md-12">
+					<section id="input"  class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					<p>&nbsp;입력은 표준입력(standard input)을 통해 받아들인다. 입력의 첫 줄에는 테스트 케이스의 개수 T (1 &le; T &le; 20)가 주어진다. 각 테스트 케이스 첫 줄에는 참가 팀의 수 N 이 주어지고 두 번째 줄부터 N 줄에는 팀 이름(team), 학교 이름(school), 문제를 푼 수(solved), 페널티(penalty)가 공백을 하나 사이에 두고 주어진다(1 &le; N &le; 1000, 1 &le; solved &le; 10, 1 &le; penalty &le; 10000, team 과 school 은 공백을 포함하지 않은 길이 20 이하의 문자열)</p>
+
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output"  class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					<p>출력은 표준출력(standard output)을 통하여 출력한다. 각 테스트 케이스에 대해서 선발된 팀 중 전체 성적이 최하위인 팀의 이름을 한 줄에 하나씩 출력하시오.&nbsp;</p>
+
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit" style="display:none;" class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+						</div>
+			</section>
+			</div>
+																	<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<section id="sampleinput1">
+						<div class="headline">
+						<h2>예제 입력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-input-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-input-1">3
+120
+WindMill DonggukU. 10 799
+IHS DonggukU. 10 957
+KBS ChungbukNationalU. 10 2670
+Guldari DonggukU. 10 3278
+Durumi DonggukU. 10 3875
+Humming ChungbukNationalU. 10 4491
+BlueOcean DonggukU. 10 5363
+Dhakerz KwangwoonU. 10 5731
+Ateam YonseiU. 10 6844
+ASCII_ANYWAY DonggukU. 10 6942
+Jupiter KangnamU. 10 7065
+academe PukyongNationalU. 10 8606
+YoMyBaby PukyongNationalU. 10 9311
+Bio-MAN PukyongNationalU. 10 9672
+Zeropage KangnamU. 9 701
+CafeLatte@CAC KongjuU 9 1062
+ISAAC KangnamU. 9 1492
+ASCII_Run PukyongNationalU. 9 1927
+Free ChosunU. 9 2056
+Black_Hole ChonnamU. 9 2362
+Woos KayaU. 9 4253
+Run&amp;Build_Blue HUFS 9 5610
+Little_Buddha Gist 9 6001
+Unlimited KyungsungU. 9 6836
+Geek KayaU. 9 6942
+Allage AndongNationalU. 9 7968
+Codeholic HansungU. 9 8037
+educom JoongbuU. 9 8274
+TimeStopper HansungU. 9 8452
+polaris ChonbukNationalU. 8 147
+WonderWomen DonggukU. 8 358
+pietta KyonggiU. 8 1175
+GG!! Gist 8 1359
+SangjiCSE MokwonU. 8 2916
+USB CUK 8 3208
+Taurine-MAN EwhaWomansU. 8 4339
+DAU Chung-AngU. 8 4376
+Nothing! KoreaMaritimeU. 8 5065
+NaturalSelection HanyangU. 8 5895
+SecuLock GJU 8 5935
+P.L.A WoosongU. 8 6712
+Hackers DongyangU. 8 6749
+Falcon GJU 8 8139
+MP3 ICU 8 8144
+AM7 KyungpookNationalU. 8 8216
+Dunhill HanbatU. 8 8783
+Mouse KangnungU. 8 9055
+PLUM SoongsilU. 7 688
+Waytogo KyungHeeU. 7 1707
+Sherbet ICU 7 3093
+Flamingo-knights EwhaWomansU. 7 5376
+One.shot SNUT 7 8217
+ZZang KookminU. 7 8394
+JustForFun SejongU. 7 8541
+Anyway KyonggiU. 7 8650
+smalleyes Chung-AngU. 7 8969
+BrainKorea DongaU. 7 9127
+HelloWorld KangnungU. 6 2478
+pknu ChosunU. 6 3237
+WANT HanyangU. 6 4678
+CodeGura AjouU. 6 5982
+EDUCOM06 KoreaMaritimeU. 6 7798
+POCS-2 KAIST 6 8398
+A.C.E JoongbuU. 6 8960
+K HanbatU. 6 9369
+Kiss DongseoU. 6 9626
+Solution MokwonU. 5 636
+goto HandongU. 5 1640
+Template HannamU. 5 1725
+BLUE AndongNationalU. 5 2247
+SUNFLOWER HannamU. 5 2797
+Great KoreaU. 5 3057
+storm@CAC Mju 5 4672
+Transmute ChonnamU. 5 8386
+Mighty InhaU. 5 8467
+Cube DongaU. 5 9315
+NFS SangJiU. 4 2733
+Nippy-Crew Mju 4 4466
+slgijung SemyungU. 4 4690
+Enigma InjeU. 4 4809
+SNUcker U.ofSeoul 4 6714
+Becaution SeoulNationalU. 4 7268
+Excalibur InjeU. 4 7809
+POCS-1 HanKukAviationU. 4 8051
+Impression POSTECH 3 1188
+Lineage ChungbukNationalU. 3 1362
+COCOA KyungsungU. 3 4895
+IamYourFather HUFS 3 5729
+NoBreak!! KyungHeeU. 3 5964
+Haroobang SogangU. 3 6421
+Oblivion CNU 3 7257
+P.C.R.C. PUFS 3 8552
+KIN~2 PusanNationalU. 3 8926
+Run&amp;Build_Red Tu 2 43
+Genesis KyungpookNationalU. 2 1258
+JUST@CAC PCU 2 1308
+Fluke AjouU. 2 1453
+VITA5000 KNIT 2 3264
+Challangers ChejuNationalU. 2 3602
+POCS-3 KonkukU. 2 3946
+HEUM DongseoU. 2 4487
+Colossus ChonbukNationalU. 2 5025
+Gag-MAN KongjuU 2 5654
+Posis DongyangU. 2 5944
+H-COPS KwangwoonU. 2 6156
+SOCG YeungnamU. 2 7232
+again2002 Dju 2 7959
+KoreaCBNU CUK 2 8242
+Alchemist HallaU. 2 8516
+lupin1 HongikU. 2 8654
+Random Dju 2 8762
+wanna_accepted KAIST 2 9556
+GuriGuri KangwonNationalU. 2 9761
+NeverAC UidukU. 1 3300
+M4A1 ChejuNationalU. 1 5293
+lupin2 HallaU. 1 5552
+A.C.E2 DongEuiU. 1 5804
+STOC HongikU. 1 6096
+MULP SillaU. 1 6590
+LoBC KangnamU. 1 9636
+130
+COCOON KyonggiU. 10 954
+SSG_Wanna_Be KonkukU. 10 2096
+Transmute KyonggiU. 10 2448
+Nothing! KyonggiU. 10 2872
+Template KyonggiU. 10 2898
+Kaist KyonggiU. 10 3453
+Little_Buddha KyonggiU. 10 4235
+ISAAC KyonggiU. 10 4813
+Jupiter KyonggiU. 10 5132
+ACceptMessage KyonggiU. 10 5261
+KDDR HannamU. 10 5311
+Hackers Gist 10 5331
+again2002 JoongbuU. 10 6770
+CK2 Gist 10 6792
+ASCII_ANYWAY InhaU. 10 9073
+PRIME Gist 10 9085
+Run&amp;Build_Blue HannamU. 10 9809
+storm@CAC InhaU. 10 9813
+DAU Gist 9 640
+Seed EwhaWomansU. 9 642
+MIRACLE AjouU. 9 1167
+POCS KangwonNationalU. 9 1536
+Y.S.J. ChosunU. 9 4529
+Mighty DonggukU. 9 6094
+IamYourFather GJU 9 6962
+Old&amp;New KAIST 9 8623
+IHS KyungsungU. 9 8653
+Geek KonkukU. 9 8900
+ASCII_Run PCU 9 9653
+KoreaCBNU KangnamU. 8 1411
+mirgachi3 KangwonNationalU. 8 1941
+ZZang KangnamU. 8 2301
+ALPS-II AjouU. 8 4027
+POCS-1 DongseoU. 8 4556
+KartRider KonkukU. 8 5037
+POCS-3 DongEuiU. 8 5456
+smalleyes KyungHeeU. 8 5911
+VITA5000 ChonnamU. 8 6381
+Great DongseoU. 8 6435
+WANT KoreaMaritimeU. 8 6605
+Free KongjuU 8 8380
+ForElise KangwonNationalU. 8 8498
+wanna_accepted Dju 7 1185
+FOCS MokwonU. 7 3303
+hycoc HanKukAviationU. 7 3925
+Haroobang KyungpookNationalU. 7 4047
+Falcon KyungHeeU. 7 4379
+Genesis EwhaWomansU. 7 4861
+WOW KangwonNationalU. 7 5233
+JustForFun DonggukU. 7 5278
+Posis PCU 7 5756
+Buffer DongEuiU. 7 6274
+Dr.Tour HannamU. 7 7031
+Stardust KangnungU. 7 7227
+The_One KwangwoonU. 6 604
+SP3 DonggukU. 6 675
+Gag-MAN JoongbuU. 6 828
+Cube KangnamU. 6 2364
+WonderWomen DongyangU. 6 2799
+Zeropage ICU 6 2931
+WaTangKa CUK 6 3045
+P.L.A HannamU. 6 4214
+E.S.C. JoongbuU. 6 4757
+HelloWorld CNU 6 5103
+CodeGura KangwonNationalU. 6 5827
+Anyway KangwonNationalU. 6 8353
+BlueOcean KongjuU 6 9263
+AlphaNumbers HUFS 6 9969
+Tclab KAIST 5 241
+NoName@S.S.F. CNU 5 1510
+SECOM HandongU. 5 2186
+YoMyBaby EwhaWomansU. 5 3361
+Bagle KwangwoonU. 5 3437
+asdf DongyangU. 5 4031
+Al-Pain Dju 5 5811
+Random HannamU. 5 6259
+KeyMaker DongseoU. 5 6790
+UP Dju 5 7369
+SUNFLOWER KoreaU. 5 7765
+AlgorithmZ ChonbukNationalU. 5 8371
+Woori MokwonU. 5 8467
+GIRLS EwhaWomansU. 5 9009
+lupin2 KangwonNationalU. 5 9990
+pets KwangwoonU. 4 609
+Unlimited HannamU. 4 708
+zraler-1 MokwonU. 4 1275
+Accepted2 HUFS 4 1335
+Reloaded PCU 4 2028
+BrainKorea HanyangU. 4 2283
+BLUE HannamU. 4 2426
+EAGLES KonkukU. 4 3543
+Chaos KyungHeeU. 4 4134
+Zenith KayaU. 4 5020
+TimeStopper DongEuiU. 4 6881
+SODA ChejuNationalU. 4 7326
+NULL KyungHeeU. 4 7343
+SOCG KangnamU. 4 8762
+ENIAC KyungpookNationalU. 3 568
+KANG KookminU. 3 1132
+Bio-MAN Mju 3 2438
+KU-LALA~ KyungsungU. 3 2847
+POCS-2 KoreaU. 3 3901
+stepbystep KyungpookNationalU. 3 6522
+A.C.E2 KayaU. 3 6971
+wind@CAC KyungsungU. 3 7574
+Kiss DonggukU. 2 26
+WindMill ICU 2 453
+Oblivion KNIT 2 528
+Colossus KoreaMaritimeU. 2 1343
+COCOA Gist 2 3068
+Pholic MokwonU. 2 3254
+Waytogo KAIST 2 3965
+Black_Hole KangnamU. 2 7212
+Ateam ChosunU. 2 8402
+MVP HanbatU. 2 8473
+Taurine-MAN KangnungU. 2 8894
+TNB KyungHeeU. 2 9036
+One.shot Dju 1 2172
+Weird-OS CNU 1 2229
+MONG PCU 1 2441
+Alchemists KookminU. 1 3042
+lupin1 HansungU. 1 3912
+Sherbet HanyangU. 1 5228
+countdown MokwonU. 1 5360
+MP3 ChejuNationalU. 1 6227
+P.C.R.C. HansungU. 1 6916
+Solution ChejuNationalU. 1 7028
+SLL KNIT 1 7700
+Flamingo-knights AjouU. 1 9333
+GuriGuri Mju 1 9517
+50
+Random ChungbukNationalU. 10 1159
+POCS GJU 10 5069
+Sherbet HandongU. 10 6524
+EDUCOM06 ChejuNationalU. 10 7516
+ArmBar DongseoU. 10 8744
+RM-RF/ CUK 10 9670
+Mighty GJU 9 2098
+MONG Gist 9 2423
+pknu InjeU. 9 3162
+IamYourFather ICU 9 5403
+Waytogo DongEuiU. 9 6208
+MULP DongEuiU. 9 6378
+Marcie DongseoU. 9 6736
+again2002 Dju 9 7733
+COCOA CNU 9 8537
+AlgorithmZ InjeU. 9 8947
+KeyMaker ChungbukNationalU. 9 9841
+hycoc HanbatU. 8 1040
+GIRLS AndongNationalU. 8 1077
+ZZang HanKukAviationU. 8 5419
+HEUM@S.S.F. Chung-AngU. 8 6310
+stepbystep Dju 8 8618
+Zraler CUK 8 9264
+Anyway EwhaWomansU. 7 350
+Taurine-MAN AndongNationalU. 7 730
+ACceptMessage CUK 7 1543
+SECOM DonggukU. 7 2556
+Colossus ChungbukNationalU. 7 6538
+Arirang Dju 6 1925
+CafeLatte@CAC DongEuiU. 6 2819
+AlphaNumbers HongikU. 6 2868
+slgijung ChejuNationalU. 5 437
+ENIAC GJU 5 1155
+zraler-2 CNU 5 1375
+E.S.C. DongyangU. 5 5947
+NoBreak!! ChonbukNationalU. 5 7958
+PaperBox DongEuiU. 5 8861
+JUST@CAC HanbatU. 5 9398
+Bagle ChonbukNationalU. 4 9701
+OTL Chung-AngU. 3 4008
+Bio-MAN ChosunU. 3 4015
+HelloWorld HannamU. 3 7572
+EAGLES ChungbukNationalU. 2 2322
+Chaos HansungU. 2 5969
+CodeGura ChungbukNationalU. 2 7350
+MP3 ChonbukNationalU. 2 8172
+TNB DongseoU. 1 416
+Kiss CUK 1 2741
+SUNFLOWER DonggukU. 1 3758
+USB HongikU. 1 9459
+</pre>
+						</section>
+					</div>
+					<div class="col-md-6">
+						<section id="sampleoutput1">
+						<div class="headline">
+						<h2>예제 출력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-output-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-output-1">Oblivion
+lupin1
+USB
+</pre>
+						</section>
+					</div>
+									</div>
+				</div>
+										<div class="col-md-12">
+				<section id="hint" style="display: none;" class="problem-section">
+				<div class="headline">
+				<h2>힌트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				
+				</div>
+				</section>
+			</div>
+								</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="/category/1">ICPC</a>&nbsp;&gt;&nbsp;<a href="/category/7">Regionals</a>&nbsp;&gt;&nbsp;<a href="/category/42">Asia Pacific</a>&nbsp;&gt;&nbsp;<a href="/category/211">Korea</a>&nbsp;&gt;&nbsp;<a href="/category/256">Nationwide Internet Competition</a>&nbsp;&gt;&nbsp;<a href="/category/detail/1086">Seoul Nationalwide Internet Competition 2007</a>&nbsp;C번</p></section></div>
+																											</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F9057">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F9057">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+
+</body>
+</html>

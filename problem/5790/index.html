@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>5790번: Log Books</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="5790">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F5790">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F5790' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/5790">5790번</a>
+</li><li><a href="/submit/5790"  >제출</a></li><li><a href="/problem/status/5790"  >맞힌 사람</a></li><li><a href="/short/status/5790"  >숏코딩</a></li><li><a href="/problem/history/5790"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=5790"  >채점 현황</a></li><li><a href="/board/search/all/problem/5790"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	5790번
+ - </span><span id="problem_title">Log Books</span>
+				<span class="problem-label problem-label-multilang">다국어</span>				<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>1 초 </td><td>128 MB</td><td>103</td><td>77</td><td>52</td><td>70.270%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>Learner drivers need to complete 50 hours of supervised driving with at least 10 hours, or more, of night driving included in the total amount. Each learner must keep a log book of their supervised driving experience with each entry containing the starting and finishing time for each driving experience.</p>
+
+<p>Poirot-the-inspector has been given the duty of checking the log books and verifying that the driving times add up to the required values and that no single driving experience exceeds 2 hours. If more than, or equal to, half the length of one driving experience occurs during the night (before sunrise or after sunset), then the whole time counts towards night driving. For example, driving from 04:50 to 06:10 on a day when sunrise is at 05:30 counts as night driving.&nbsp;</p>
+
+<p>However, Poirot has never been good with numbers and he is requesting assistance with this duty. Your task is to write a program that reads a learner&#39;s log book and checks that the required driving times have been completed without violating the 2 hour length rule.</p>
+
+				</div>
+				</section>
+			</div>
+										<div class="col-md-12">
+					<section id="input"  class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					<p>The input consists of a number of test cases. The description for each test case starts with an integer N, on a line by itself, that represents the number of entries in one log book. 25 &lt; N &lt; 300. Each of the following N lines contains a record of one driving experience with four times representing sunrise, sunset, and the starting and finishing time in that order. The starting time is strictly smaller than the finishing time. A single space separates the times and each time has a value between 00:00 (midnight) and 23:59 (one minute to midnight), inclusive. A line with a zero by itself terminates the input and is not to be processed.</p>
+
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output"  class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					<p>The output for each log book consists of the string PASS if the required driving times have been completed without violating the 2 hour length rule. Otherwise, print the string NON.</p>
+
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit" style="display:none;" class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+						</div>
+			</section>
+			</div>
+																	<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<section id="sampleinput1">
+						<div class="headline">
+						<h2>예제 입력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-input-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-input-1">120
+05:34 17:41 04:01 04:18
+06:49 19:02 06:27 07:29
+06:55 18:31 12:18 22:44
+07:02 17:55 09:06 10:37
+06:49 19:30 04:00 04:22
+07:12 18:25 09:14 10:35
+05:42 17:01 12:27 12:31
+06:03 18:23 17:34 17:54
+07:51 18:57 12:25 13:20
+06:43 17:52 09:23 10:20
+05:10 18:28 07:17 08:18
+07:23 19:08 06:32 07:39
+06:19 17:44 20:31 20:42
+06:11 18:24 05:07 06:42
+05:14 17:19 08:25 09:36
+07:05 19:22 16:00 17:40
+05:25 17:25 10:09 10:30
+05:38 19:49 15:22 15:45
+05:54 18:54 05:21 06:02
+06:45 19:44 04:14 05:28
+07:55 17:01 15:24 15:44
+06:57 17:30 04:26 04:57
+06:31 19:37 04:36 04:59
+06:53 17:27 10:23 10:55
+05:22 17:21 09:19 09:42
+07:26 18:28 09:24 09:36
+07:17 17:17 04:10 04:40
+07:30 18:46 10:07 10:24
+06:14 18:52 12:00 13:10
+05:00 17:05 20:26 20:59
+07:08 19:33 10:02 10:47
+05:37 18:17 04:15 04:25
+05:06 17:27 04:13 04:47
+07:01 19:39 10:26 10:57
+05:26 18:06 10:06 11:19
+07:37 18:45 09:21 09:53
+06:53 18:55 13:02 14:24
+05:09 19:05 15:16 15:33
+05:46 19:29 16:19 16:31
+07:22 18:53 13:12 13:58
+05:04 18:26 06:22 07:23
+06:50 17:46 06:08 06:12
+06:39 19:18 06:25 06:31
+05:45 18:30 16:07 16:47
+06:23 17:25 12:22 12:44
+06:48 19:21 09:00 09:26
+05:52 17:45 05:00 06:48
+06:48 18:04 14:01 14:39
+06:01 19:56 08:23 09:49
+05:23 18:38 06:05 06:51
+07:14 19:13 07:14 07:38
+05:16 19:43 13:12 14:07
+05:18 19:27 13:31 14:20
+07:49 17:27 06:24 07:49
+06:10 18:20 14:39 14:42
+05:53 19:04 18:14 19:19
+06:31 17:00 16:19 16:23
+06:30 18:06 10:07 11:01
+05:50 17:28 13:02 13:33
+07:29 18:55 18:01 19:03
+05:52 19:40 12:37 13:23
+06:08 18:10 06:05 06:06
+07:38 18:35 19:12 19:22
+07:19 17:59 09:32 09:53
+07:38 18:04 12:26 13:35
+06:40 17:26 11:07 12:44
+05:34 19:36 16:37 16:50
+07:28 17:42 16:26 16:39
+05:06 17:56 15:07 16:07
+05:55 17:44 11:16 12:10
+06:52 17:00 20:35 21:25
+07:53 18:45 19:17 20:30
+05:31 19:02 18:17 19:27
+05:35 17:57 06:37 07:25
+06:56 19:09 10:01 11:55
+06:07 19:47 13:07 14:34
+06:45 17:45 10:17 11:45
+07:31 17:26 17:06 17:24
+06:55 17:28 14:00 14:14
+06:41 19:33 07:21 08:33
+06:05 19:18 10:26 10:58
+05:25 19:36 14:09 15:23
+05:41 17:25 07:09 08:53
+06:04 17:02 12:19 13:59
+05:02 19:28 06:11 07:53
+05:17 19:58 08:12 09:45
+06:14 18:46 19:28 20:10
+07:48 19:58 18:23 18:56
+05:22 19:53 19:10 20:54
+05:59 18:57 19:32 20:47
+06:29 18:59 17:39 18:55
+07:05 18:37 17:38 18:09
+05:17 18:49 12:10 13:10
+07:15 17:27 18:11 18:56
+07:53 18:19 05:33 06:25
+05:05 19:04 05:23 06:55
+05:40 19:13 05:17 05:41
+06:39 18:06 14:39 15:08
+06:06 18:47 19:16 19:48
+06:49 17:19 07:25 08:43
+05:28 18:00 10:29 10:37
+06:39 17:57 09:38 10:03
+07:22 18:00 09:07 10:46
+06:25 17:43 05:18 06:00
+07:57 18:51 18:36 18:58
+05:26 18:17 19:04 19:58
+06:28 18:14 08:29 08:44
+06:19 19:36 20:27 21:39
+05:18 18:46 20:38 21:51
+05:15 18:55 04:30 04:45
+05:59 18:43 06:31 07:50
+05:02 17:16 19:23 19:39
+05:46 18:51 07:34 07:57
+07:04 17:34 10:06 10:56
+07:24 19:04 06:37 06:53
+05:25 17:30 20:29 21:21
+05:21 19:47 19:29 19:32
+07:45 17:46 08:05 09:37
+07:02 19:26 05:11 06:26
+07:01 18:16 11:30 12:51
+176
+07:36 18:33 05:00 06:24
+06:22 19:51 08:06 09:51
+05:17 19:27 15:20 15:46
+05:33 19:31 13:25 13:56
+07:35 17:51 16:05 17:56
+05:38 17:30 19:25 20:25
+05:34 18:23 13:14 14:41
+06:23 17:58 13:19 14:18
+06:05 19:08 12:29 13:55
+07:28 18:36 20:16 20:22
+05:38 18:35 12:10 12:21
+07:01 17:37 13:20 13:24
+05:58 18:06 20:08 20:56
+07:35 18:51 18:07 18:28
+07:46 19:28 08:29 08:57
+07:52 18:10 10:03 10:24
+06:35 18:29 10:08 10:55
+05:52 19:52 09:20 10:59
+06:09 18:19 10:12 10:48
+05:48 18:40 04:32 05:03
+06:35 19:21 10:04 10:37
+06:30 18:20 12:07 13:36
+06:32 19:58 18:11 18:19
+07:38 17:04 14:26 15:39
+07:54 18:45 11:28 11:50
+07:05 19:18 06:02 07:31
+06:33 17:51 14:35 14:51
+05:16 19:53 04:09 04:45
+05:38 19:46 11:07 11:51
+06:03 17:28 10:07 10:24
+05:31 19:18 09:00 09:01
+05:54 17:04 07:38 07:44
+06:44 18:31 17:25 17:31
+07:04 17:19 13:22 14:31
+07:00 19:16 17:39 17:47
+05:51 17:07 07:32 08:48
+05:34 18:49 12:35 13:33
+06:39 18:31 18:24 19:09
+06:24 18:00 15:35 15:45
+06:29 18:39 20:27 21:13
+05:47 17:34 20:25 20:36
+05:36 18:38 12:21 13:08
+07:56 18:43 12:12 13:19
+05:11 19:25 06:04 07:24
+07:07 18:04 18:07 18:43
+06:12 18:09 16:24 16:41
+07:06 19:45 13:01 13:41
+06:01 18:50 18:27 18:30
+07:57 18:35 19:31 20:18
+06:11 19:17 19:12 19:13
+05:51 18:48 09:00 09:41
+05:12 19:34 15:04 15:55
+05:28 17:38 12:23 12:34
+07:16 17:42 19:00 19:26
+06:22 19:37 09:29 10:06
+07:19 18:34 16:03 17:32
+06:19 17:06 04:18 04:20
+06:24 19:45 12:29 12:38
+07:37 17:18 15:27 16:01
+07:23 19:51 10:07 11:17
+07:23 17:42 18:25 18:35
+07:07 19:52 06:10 07:54
+07:38 19:30 12:20 13:57
+05:01 19:58 13:02 14:28
+05:59 18:30 11:07 12:28
+06:50 17:15 11:26 11:35
+07:35 19:53 12:20 13:13
+07:14 18:54 07:11 08:33
+05:48 18:18 14:30 15:19
+06:52 17:30 08:16 08:29
+07:17 19:34 09:34 09:56
+07:57 18:20 13:14 13:56
+05:42 19:26 12:10 12:55
+07:49 18:14 08:23 08:45
+06:11 17:22 18:33 19:35
+07:14 19:45 05:35 05:54
+05:07 19:25 07:22 08:29
+06:51 18:59 07:31 07:56
+05:31 19:44 12:27 13:13
+05:11 17:26 05:17 06:11
+07:29 19:36 19:00 20:16
+05:29 19:56 10:00 11:55
+06:31 18:50 09:04 09:07
+07:30 19:59 05:31 06:36
+05:27 19:55 14:03 14:36
+05:00 17:41 04:23 04:24
+05:27 19:28 06:26 07:44
+07:50 17:58 14:34 14:45
+07:58 17:20 04:23 05:58
+06:47 18:11 13:22 13:26
+07:43 17:02 13:08 13:57
+05:03 17:46 06:02 07:55
+06:32 17:15 06:30 06:36
+06:35 19:27 08:27 09:57
+07:21 19:52 04:37 04:42
+07:18 17:09 17:31 17:51
+06:09 18:00 17:32 17:44
+06:25 17:50 16:22 17:52
+05:00 19:51 09:09 10:14
+07:25 17:15 12:15 13:03
+05:54 17:21 14:34 14:54
+06:03 18:01 13:10 13:51
+07:56 19:47 07:03 07:29
+07:29 19:12 06:02 06:27
+06:33 17:31 09:37 10:30
+05:07 17:22 18:13 18:34
+07:08 17:50 12:25 12:51
+07:41 17:52 09:18 10:45
+07:28 18:28 12:19 13:40
+06:48 17:18 05:04 06:33
+05:56 19:28 09:21 09:28
+05:43 19:26 12:18 12:41
+07:12 17:18 11:04 11:49
+07:10 19:18 18:10 18:32
+07:07 19:17 16:28 16:32
+07:00 18:44 06:20 06:47
+07:03 18:10 05:08 05:15
+06:37 19:28 16:02 16:23
+06:52 17:12 09:33 10:08
+07:22 18:45 06:24 07:42
+07:07 18:43 09:16 09:21
+05:12 18:44 11:19 11:43
+06:16 19:37 13:18 14:41
+07:09 18:50 04:17 05:10
+06:45 18:53 09:18 09:31
+06:16 19:00 11:27 12:40
+07:55 19:57 18:06 18:12
+05:48 17:03 16:11 16:45
+06:11 17:54 08:02 09:57
+06:39 18:36 07:15 08:05
+07:00 19:56 15:03 16:31
+07:52 17:04 10:17 10:56
+05:37 18:37 14:12 15:10
+05:46 19:24 19:25 19:41
+06:47 18:00 15:03 16:32
+05:19 18:40 12:20 13:25
+05:13 19:30 08:27 09:06
+07:44 18:59 05:28 05:48
+07:17 19:52 07:38 08:21
+05:09 18:10 09:10 10:33
+07:22 18:52 09:32 09:38
+07:49 18:18 10:00 10:19
+06:11 17:52 19:08 20:43
+06:35 17:01 12:36 13:25
+06:06 18:13 15:39 16:05
+06:40 17:30 11:21 11:53
+07:49 17:35 16:26 16:58
+07:09 17:14 06:03 07:13
+06:54 17:51 19:24 19:54
+06:35 17:03 04:14 05:17
+06:42 19:29 08:28 08:45
+06:48 17:53 09:33 10:57
+05:27 18:28 08:13 08:38
+07:48 19:01 18:00 18:57
+07:37 19:13 08:00 09:40
+05:43 17:29 19:38 19:41
+07:35 19:35 16:34 16:56
+07:27 19:21 16:14 17:04
+06:36 17:23 15:17 16:18
+07:02 17:00 18:34 19:57
+07:09 17:44 12:02 12:39
+06:46 17:37 10:13 10:59
+06:06 19:27 11:27 12:26
+06:39 17:43 12:13 12:19
+05:06 17:14 17:01 17:38
+06:40 19:52 14:26 14:34
+05:18 17:33 04:11 05:19
+05:57 18:12 13:27 14:27
+05:35 18:00 19:36 19:45
+05:41 18:27 17:30 18:59
+07:19 17:36 05:15 05:16
+07:26 17:00 10:14 10:27
+05:14 19:50 08:28 08:52
+06:06 17:34 13:01 14:32
+06:59 18:14 13:34 13:38
+06:41 18:41 05:33 06:59
+0
+</pre>
+						</section>
+					</div>
+					<div class="col-md-6">
+						<section id="sampleoutput1">
+						<div class="headline">
+						<h2>예제 출력 1
+							<button type="button" class="btn btn-link copy-button" style="padding: 0px;" data-clipboard-target="#sample-output-1">복사</button>
+						</h2>
+						</div>
+						<pre class="sampledata" id="sample-output-1">NON
+PASS
+</pre>
+						</section>
+					</div>
+									</div>
+				</div>
+										<div class="col-md-12">
+				<section id="hint" style="display: none;" class="problem-section">
+				<div class="headline">
+				<h2>힌트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				
+				</div>
+				</section>
+			</div>
+								</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="/category/1">ICPC</a>&nbsp;&gt;&nbsp;<a href="/category/7">Regionals</a>&nbsp;&gt;&nbsp;<a href="/category/92">South Pacific</a>&nbsp;&gt;&nbsp;<a href="/category/104">South Pacific Region</a>&nbsp;&gt;&nbsp;<a href="/category/detail/575">2012 ACM South Pacific Programming Contest</a>&nbsp;B번</p></section></div>
+																											</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F5790">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F5790">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+
+</body>
+</html>

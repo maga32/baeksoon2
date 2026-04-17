@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>10231번: Languages</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="10231">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F10231">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F10231' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/10231">10231번</a>
+</li><li><a href="/submit/10231"  >제출</a></li><li><a href="/problem/status/10231"  >맞힌 사람</a></li><li><a href="/short/status/10231"  >숏코딩</a></li><li><a href="/problem/history/10231"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=10231"  >채점 현황</a></li><li><a href="/board/search/all/problem/10231"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	10231번
+ - </span><span id="problem_title">Languages</span>
+				<span class="problem-label problem-label-subtask">서브태스크</span><span class="problem-label problem-label-partial">점수</span><span class="problem-label problem-label-multilang">다국어</span><span class="problem-label problem-label-language-restrict language-restrict">언어 제한</span><span class="problem-label problem-label-func">함수 구현</span>				<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>10 초 </td><td>256 MB</td><td>180</td><td>34</td><td>13</td><td>12.500%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>You are to write an interactive program that, given a sequence of Wikipedia excerpts (see example below), guesses the language of each, in turn. After each guess, your program is given the correct answer, so that it may learn to make better guesses the longer it plays.</p>
+
+<p>Each language is represented by a number L between 0 and 55. Each excerpt has exactly 100 symbols, represented as an array E of 100 integers between 1 and 65&thinsp;535. These integers between 1 and 65&thinsp;535 have been assigned arbitrarily, and do not correspond to any standard encoding.</p>
+
+<p>You are to implement the procedure&nbsp;<b>excerpt(E)</b>&nbsp;where&nbsp;<b>E</b>&nbsp;is an array of 100 numbers representing a Wikipedia excerpt as described above. Your implementation must call&nbsp;<b>language(L)</b>&nbsp;once, where&nbsp;<b>L</b>&nbsp;is its guess of the language of the Wikipedia edition from which E was extracted. The grading server implements&nbsp;<b>language(L)</b>, which scores your guess and returns the correct language. That is, the guess was correct if&nbsp;<b>language(L)</b>&nbsp;=&nbsp;<b>L</b>.</p>
+
+<p>The grading server calls&nbsp;<b>excerpt(E)</b>&nbsp;10&thinsp;000 times, once for each excerpt in its input file. Your implementation&#39;s&nbsp;<i>accuracy</i>&nbsp;is the fraction of excerpts for which&nbsp;<b>excerpt(E)</b>&nbsp;guessed the correct language.</p>
+
+<p>You may use any method you wish to solve this problem.&nbsp;<i>Rocchio&#39;s method</i>&nbsp;is an approach that will yield accuracy of approximately 0.4. Rocchio&#39;s method computes the similarity of E to each language L seen so far, and chooses the language that is most similar. Similarity is defined as the total number of distinct symbols in E that appear anywhere amongst the previous excerpts from language L.</p>
+
+<p>Note that the input data have been downloaded from real Wikipedia articles, and that there may be a few malformed characters or fragments of text. This is to be expected, and forms part of the task.</p>
+
+				</div>
+				</section>
+			</div>
+																	<div class="col-md-12">
+					<section id="input" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit" style="display:none;" class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+						</div>
+			</section>
+			</div>
+												<div class="col-md-12">
+						<section id="custom_example" class="problem-section">
+							<div class="headline">
+								<h2>예제</h2>
+							</div>
+							<div id="problem_custom_example" class="problem-text">
+								<p>For illustration only, we show the textual representation of excerpts from 56 language-specific editions of Wikipedia.</p>
+
+<ol start="0">
+	<li>Yshokkie word meestal in Kanada , die noorde van die VSA en in Europa gespeel. Dit is bekend as &#39;n b</li>
+	<li>المنتج الحدي Marginal Producer ، وهو المنتج الذي يجعل المنظم لا يكسب ربحا ولا يخسر ويحصل على دخل يكف</li>
+	<li>&quot;BAKILI&quot; Futbol Klubu 1995-ci ildə Misir Səttаr oğlu Əbilov tərəfindən yаrаdılmış və həvəskаr futbol</li>
+	<li>Квинт Фулвий Флак (Quintus Fulvius Flaccus; &dagger; 205 пр.н.е. ) e политик и генерал на Римската републик</li>
+	<li>ইন্ডিয়ান ইনস্টিটিউট অফ সোশ্যাল ওয়েলফেয়ার অ্যান্ড বিজনেস ম্যানেজমেন্ট (সংক্ষেপে আইআইএসডব্লিউবিএম )</li>
+	<li>5. juni ( lipanj ) ( 5.6. ) je 156. dan godine po gregorijanskom kalendaru (157. u prestupnoj godini</li>
+	<li>La Caunette &eacute;s un municipi franc&egrave;s , situat al departament de l&#39; Erau i a la regi&oacute; de Llenguadoc-Ros</li>
+	<li>Praha je mal&eacute; městečko v Texasu , kter&eacute; lež&iacute; cca 85&nbsp;km na jihoz&aacute;pad od Austinu . Bylo založeno</li>
+	<li>Graeme Allen Brown (f&oslash;dt 9. april 1979 i Darwin , Northern Territory , Australien ) er en australsk</li>
+	<li>Der Plattiger Habach ( 3.214&nbsp; m&nbsp;&uuml;.&nbsp;A. , nach anderen Angaben nur 3.207&nbsp; m [1] )</li>
+	<li>&Tau;&omicron; &Nu;&eta;&sigma;ί &Gamma;&kappa;&rho;έ&iota;&tau; &Mu;&pi;ά&rho;&rho;&iota;&epsilon;&rho; ( &Alpha;&gamma;&gamma;&lambda;&iota;&kappa;ά : Great Barrier Island , &Mu;&alpha;&omicron;&rho;ί : Motu Aotea ) &epsilon;ί&nu;&alpha;&iota; &nu;&eta;&sigma;ί &sigma;&tau;&alpha; &beta;ό&rho;&epsilon;&iota;</li>
+	<li>Sid Bernstein Presents... is a 2010 feature-length documentary film by directors Jason Ressler and E</li>
+	<li>El t&eacute;rmino latino lex loci celebrationis aplicado al derecho internacional privado quiere decir: &quot;le</li>
+	<li>Apollo 5 oli kosmoselaev , mis sooritas Apollo programmi teise mehitamata lennu. Lennu k&auml;igus testit</li>
+	<li>سیارک ۱۳۵۰ (به انگلیسی : 1350 Rosselia ، نامگذاری :1934TA )&rlm; هزار و سیصد و پنجاهمین سیارک کشف شده&zwnj;اس</li>
+	<li>V. I. Beretti (my&ouml;s Vikenty Ivanovit&scaron; Beretti , alk. Vincent Beretti ; 1781 Milano Italia &ndash; 18. elok</li>
+	<li>Le 5 e bataillon de parachutistes vietnamiens (ou 5 e BPVN ou encore 5 e Bawouan ) est une unit&eacute; par</li>
+	<li>Amina Sarauniyar Zazzau,, wadda ta rayu daga shekarar 1533 zuwa 1610, ɗaya ce daga cikin &lsquo;ya&#39;ya biyu</li>
+	<li>ב מתמטיקה , השערת רימן היא השערה שהציע בשנת 1859 ה מתמטיקאי ברנרד רימן , מגדולי המתמטיקאים של אותה ע</li>
+	<li>Sudski proces Doe protiv Boltona je sudski proces iz 1973 . godine kojim je američki Vrhovni sud uki</li>
+	<li>Owen Cunningham Wilson ( 1968 . november 18. , Dallas , Texas , Egyes&uuml;lt &Aacute;llamok ) amerikai sz&iacute;n&eacute;sz</li>
+	<li>Հայ Կաթողիկե Եկեղեցին պատկանում է Արևելյան Կաթոլիկ Եկեղեցիներին և այսպիսով ենթարկվում է Հռոմի Պապի ա</li>
+	<li>Dionysios dari Halicarnassus ( Bahasa Yunani : &Delta;&iota;&omicron;&nu;ύ&sigma;&iota;&omicron;&sigmaf; Ἀ&lambda;&epsilon;&xi;ά&nu;&delta;&rho;&omicron;&upsilon; Ἀ&lambda;&iota;&kappa;&alpha;&rho;&nu;ᾱ&sigma;&sigma;&epsilon;ύ&sigmaf; , Dionysios putra</li>
+	<li>Nnamdi &quot;Zik&quot; Azikiwe , bu onye isi-ala izizi Nijiria nwere. Ochichi ya bidolu na afo 1954 welu ruo n</li>
+	<li>La Riserva naturale orientata Serre della Pizzuta &egrave; un&#39;area protetta del dipartimento Regionale di S</li>
+	<li>石橋和義 （いしばし かずよし/まさよし、生没年不詳）は、 �詳。 石橋氏 初代当主。初名氏義。 尾張 三郎を通称とし、官途は、 左近将監 &rarr; 三河守 &rarr; 左衛門佐 。 足利直義</li>
+	<li>კორბინ ბლიუ ( ინგლ. Corbin Bleu ; დ. 21 თებერვალი , 1989 , დაბადების ადგილი ბრუკლინი , ნიუ-იორკი , ა</li>
+	<li>Та́рья Ка́арина Ха́лонен (Tarja Kaarina Halonen)); 24 желтоқсан , 1943 , Каллио , Хельсинки , Финлан</li>
+	<li>딜롱 ( Dilong )은 중국 랴오닝(Liaoning) 지방의 익시안층(Yixian Formation)에서 온전한 4구의 화석으로 발견되었다. 이 공룡은 가장 원시적인 초기의 티</li>
+	<li>Сүймөнкул Чокморов - советтик актёр. Жетинин айынын 9 (ноябрь) 1939-жылы, Фрунзе шаарын жанындагы Чо</li>
+	<li>D&#39; Mirjam vun Abellin war eng Nonn a Mystikerin , och &quot; Maria vum gekr&auml;izegte Jesus &quot; genannt. Si as</li>
+	<li>Panopea abrupta ( angl. Geoduck ) - jūrinių dvigeldžių moliuskų rū&scaron;is, priklausanti Hiatellidae &scaron;eim</li>
+	<li>&quot;Dzimis Latvijā&quot; ir Liepājas dueta Fomins &amp; Kleins 2004 . gada 23. februārī izdotais otrais albu</li>
+	<li>I Ludwik Lejzer Zamenhof dia dokotera mpijery maso nipetraka any Polonia . Fantantsika izy ankehitri</li>
+	<li>Седумстотини милиони малечки алвеоли во белите дробови , всушност се шупливи чаури - алвеоли прекрие</li>
+	<li>Энэхүү шувуу нь Бутан , Хятад , Гонконг , Энэтхэг , Пакистан , Иран , Япон , Казакстан , Солонгос ,</li>
+	<li>भारतातील महाराष्ट्र राज्याच्या नागपूर पासुन २१६ कि.मी. दूर असलेले एक गाव. ते वैनगंगा नदीच्या काठावर</li>
+	<li>De Slotervaart was oorspronkelijk de waterweg die sinds de Middeleeuwen het dorp Sloten verbond met</li>
+	<li>Macierz S (macierz rozpraszania, od ang. scattering matrix ) jest centralnym elementem w mechanice k</li>
+	<li>A Hora do Rush 3 ( Rush Hour 3 , no original) &eacute; o terceiro filme da franquia Rush Hour . Dirigido po</li>
+	<li>Coordonate : 51&deg;34&prime;0&Prime;N 12&deg;3&prime;0&Prime;E ﻿ / ﻿ 51.56667 , 12.05 Brachstedt este o comună din landul Saxonia-A</li>
+	<li>Гробницы императоров династии Мин и Цин &mdash; памятник Всемирного наследия ЮНЕСКО , состоящий из несколь</li>
+	<li>Kovalentni radijus atoma - ponekad se naziva i valentni radijus. Kovalentni radijus je srednje rasto</li>
+	<li>Koniecpol je mesto v Poľsku v Sliezskom vojvodstve v okrese Powiat częstochowski v rovnomennej gmine</li>
+	<li>Hoxh&euml; Vokrri vije nga Shqip&euml;ria ishte nj&euml; klerik shqiptar i cili luftonte p&euml;r &Ccedil;&euml;shtj&euml;n Komb&euml;tare . A</li>
+	<li>Гурдијеље је насеље у општини Тутин у Рашком округу . Према попису из 2002. било је 93 становника (п</li>
+	<li>Underh&aring;llsst&ouml;d betalas ut av F&ouml;rs&auml;kringskassan (FK) till en f&ouml;r&auml;lder som &auml;r v&aring;rdnadshavare och bor e</li>
+	<li>இந்தியாவின் தேசிய நெடுஞ்சாலைகள் நடுவண் அரசின் தேசிய நெடுஞ்சாலைத் துறையால் பராமரிக்கப்படுகின்றன. பெரு</li>
+	<li>Дар он зиндаги .маишат ,фаолияти мехнати,муборизаи ичтимои, русуму омол, хислат ва эхсосоти халк ифо</li>
+	<li>ไฟทอฟธอรา อินเฟสทันส ( อังกฤษ : Phytophthora infestans ) คือเชื้อ ราโอโอไมซีท หรือ ราน้ำ ที่เป็นสาเห</li>
+	<li>ABUL FAWARIS BERRANY - 11. asyrda Orta Azi&yacute;adaky oguz ta&yacute;palarynyň berrany dinasti&yacute;asynyň wekili. Ol</li>
+	<li>Egemenlik ya da h&acirc;kimiyet , bir toprak par&ccedil;ası ya da mekan &uuml;zerindeki kural koyma g&uuml;c&uuml; ve hukuk yara</li>
+	<li>Темне фентезі (від англ. Dark Fantasy - темне, похмуре фентезі ) - піджанр літератури, який включає</li>
+	<li>Paris By Night 84: In Atlanta - Passport to Music &amp; Fashion (&Acirc;m nhạc v&agrave; Thời trang) l&agrave; chương tr</li>
+	<li>ISO 3166-2:GU ni akoole ninu ISO 3166-2 , apa opagun ISO 3166 ti International Organization for Stan</li>
+	<li>下卡姆斯克 （ 俄文 ： Нижнека́мск ； 韃靼語 ： Түбән Кама/T&uuml;b&auml;n Kama ）是 俄羅斯 韃靼斯坦共和國 東北部的一個城市，位於 卡馬河 南岸。 2002年 人口22</li>
+</ol>
+
+<p>The sample input file&nbsp;<a href="https://upload.acmicpc.net/91ba6b19-8bbc-4e1d-bca8-20420b46b1ba/">grader.in.1</a> contains 10&thinsp;000 such examples. The 56 languages are those listed as &quot;mother tongue&quot; in the IOI 2010 registration data. The language for each excerpt is chosen at random from these 56 languages, and each excerpt is taken from the first paragraph of an article chosen at random from the corresponding Wikipedia edition. Each line of the file contains:</p>
+
+<ul>
+	<li>The two-letter ISO code for the Wikipedia language edition;</li>
+	<li>100 numbers between 1 and 65&thinsp;535, representing the first 100 symbols, in sequence, of the first paragraph of the article;</li>
+	<li>a viewable representation (in UTF-8) of the 100 symbols that you can read in your text editor or Firefox web browser. This viewable representation is for your convenience only, and is not intended to be used as input for your program.</li>
+</ul>
+
+<p>The official grader uses 10&thinsp;000 different excerpts, selected in the same way from the same 56 Wikipedia editions. However, the grader assigns a different number between 0 and 55 to each language, and a different number between 1 and 65&thinsp;535 to each symbol.</p>
+
+							</div>
+						</section>
+					</div>
+																																<div class="col-md-12">
+							<section id="subtask1" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 1 (30점)</h2>
+							</div>
+							<div id="problem_subtask1" class="problem-text">
+															<p>Your submission must achieve accuracy of 0.3 or better on the grading server.</p>
+
+							</div>
+							</section>
+							</div>
+													<div class="col-md-12">
+							<section id="subtask2" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 2 (80점)</h2>
+							</div>
+							<div id="problem_subtask2" class="problem-text">
+															
+<p>Your score will be 114(&alpha;-0.3), rounded to the nearest integer, where &alpha; is the accuracy of your submission.</p>
+
+							</div>
+							</section>
+							</div>
+																															<div class="col-md-12">
+				<section id="hint" style="display: none;" class="problem-section">
+				<div class="headline">
+				<h2>힌트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				
+				</div>
+				</section>
+			</div>
+															<div class="col-md-12">
+						<section id="custom_attachment" class="problem-section">
+							<div class="headline">
+								<h2>첨부</h2>
+							</div>
+							<div id="problem_custom_attachment" class="problem-text">
+								<ul>
+	<li><a href="https://upload.acmicpc.net/5758ee1c-ed3c-4d7f-a1e2-75262963d291/">grader.h</a></li>
+	<li><a href="https://upload.acmicpc.net/9a732541-d2a5-43b6-a880-906d2f5eab76/">lang.h</a></li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+									</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="/category/2">Olympiad</a>&nbsp;&gt;&nbsp;<a href="/category/99">International Olympiad in Informatics</a>&nbsp;&gt;&nbsp;<a href="/category/554">IOI 2010</a>&nbsp;&gt;&nbsp;<a href="/category/detail/525">Day 1</a>&nbsp;4번</p></section></div>
+																<div class="col-md-12">
+				<section id="language_restrict">
+				<div class="headline">
+				<h2>제출할 수 있는 언어</h2>
+				</div>
+				<div class="problem-text">
+					<p>
+						C++17, C++14, C++20, C++14 (Clang), C++17 (Clang), C++20 (Clang)					</p>
+				</div>
+				</section>
+			</div>
+									<div class="col-md-12">
+				<section id="problem-judge-info">
+					<div class="headline">
+						<h2>채점 및 기타 정보</h2>
+					</div>
+					<ul>
+																												<li>100점 이상을 획득해야 <span class="result-ac-text"></span>를 받는다.</li>
+																										<li>예제는 채점하지 않는다.</li>
+																																																																	</ul>
+				</section>
+			</div>
+												</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F10231">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F10231">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script>
+	$(function() {
+		$('.language-restrict').click(function(e) {
+			$(window).scrollTo('#language_restrict', 100, {
+				over: {
+					top: -0.1
+				}
+			});
+		});
+	});
+</script>
+
+</body>
+</html>
