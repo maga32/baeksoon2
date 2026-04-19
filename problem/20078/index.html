@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>20078번: Toy Train</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="20078">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F20078">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F20078' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/20078">20078번</a>
+</li><li><a href="/submit/20078"  >제출</a></li><li><a href="/problem/status/20078"  >맞힌 사람</a></li><li><a href="/short/status/20078"  >숏코딩</a></li><li><a href="/problem/history/20078"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=20078"  >채점 현황</a></li><li><a href="/board/search/all/problem/20078"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	20078번
+ - </span><span id="problem_title">Toy Train</span>
+				<span class="problem-label problem-label-subtask">서브태스크</span><span class="problem-label problem-label-multilang">다국어</span><span class="problem-label problem-label-language-restrict language-restrict">언어 제한</span><span class="problem-label problem-label-func">함수 구현</span>				<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>2 초 </td><td>512 MB</td><td>150</td><td>60</td><td>49</td><td>38.281%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>Arezou and her brother Borzou are twins. They have received an amazing toy train set for their birthday, and they used it to build a railway system with $n$ stations and $m$&nbsp;<em>one-way</em>&nbsp;tracks. The stations are numbered from $0$ to $n-1$. Each track starts at one station and ends at the same or a different station. There is at least one track starting at each station.</p>
+
+<p>Some stations are&nbsp;<em>charging stations</em>. Whenever the train arrives at a charging station, it gets fully charged. A fully charged train has enough energy to travel along $n$ consecutive tracks. That is, the train runs out of energy just when it enters the $(n+1)$-st track after last being charged.</p>
+
+<p>On each station there is a switch that can be pointed to any of the tracks that start at that station. When a train is at a station, it leaves it using the track that is pointed to by the switch on that station.</p>
+
+<p>The twins are going to play a game with their train. They have already divided all the stations between themselves: each station is either owned by Arezou or by Borzou. There is a single train. At the beginning of the game the train is at station $s$ and it is fully charged. To start the game, the owner of station $s$ points the switch on station $s$ to one of the tracks that start at station $s$. Then, they turn the train on and the train starts traveling along the tracks.</p>
+
+<p>Whenever the train enters a station for the first time, the owner of that station sets the switch on that station. Once a switch is set, it stays in the same position for the rest of the game. Thus, if a train re-enters a station it visited before, it will leave that station along the same track as before.</p>
+
+<p>Since there is a finite number of stations, the train will eventually start going along a&nbsp;<em>cycle</em>. A cycle is a sequence of&nbsp;<em>distinct</em>stations $c[0], c[1], \cdots, c[k-1]$ such that the train leaves station $c[i]$ (for $0 \leq i &lt; k-1$) using a track going to station $c[i+1]$, and it leaves station $c[k-1]$ using a track going to station $c[0]$. Note that a cycle may consist of a single station (i.e., have $k=1$) if the train leaves the station $c[0]$ using a track that goes back to $c[0]$.</p>
+
+<p>Arezou wins the game if the train continues going indefinitely, and Borzou wins if the train runs out of energy. In other words, if there is at least one charging station among $c[0], c[1], \cdots, c[k-1]$, the train can recharge and cycle indefinitely, and Arezou wins. Otherwise, it will run out of energy (possibly after turning around the cycle several times), and Borzou wins.</p>
+
+<p>You are given the description of the railway system. Arezou and Borzou are going to play $n$ games. In the $s$-th game, for $0 \leq s \leq n-1$, the train will initially be at station $s$. Your task is to find, for each game, whether there is a strategy for Arezou that guarantees she wins, regardless of how Borzou plays.</p>
+
+				</div>
+				</section>
+			</div>
+												<div class="col-md-12">
+						<section id="custom_implementation" class="problem-section">
+							<div class="headline">
+								<h2>구현</h2>
+							</div>
+							<div id="problem_custom_implementation" class="problem-text">
+								<p>You should implement the following procedure:</p>
+
+<pre>
+<code>int[] who_wins(int[] a, int[] r, int[] u, int[] v)
+</code></pre>
+
+<ul>
+	<li>$a$: array of length $n$. If Arezou owns station $i$, $a[i] = 1$. Otherwise, Borzou owns station $i$ and $a[i] = 0$.</li>
+	<li>$r$: array of length $n$. If the station $i$ is a charging station, $r[i] =1$. Otherwise, $r[i] = 0$.</li>
+	<li>$u$ and $v$: arrays of length $m$. For all $0 \leq i \leq m-1$, there is a one-way track starting at station $u[i]$ and ending at station $v[i]$.</li>
+	<li>This procedure should return an array $w$ of length $n$. For each $0 \leq i \leq n-1$, the value of $w[i]$ should be $1$ if Arezou can win the game that starts at station $i$, regardless of how Borzou plays. Otherwise, the value of $w[i]$ should be $0$.</li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+									<div class="col-md-12">
+						<section id="custom_example" class="problem-section">
+							<div class="headline">
+								<h2>예시</h2>
+							</div>
+							<div id="problem_custom_example" class="problem-text">
+								<pre>
+<code>who_wins([0, 1], [1, 0], [0, 0, 1, 1], [0, 1, 0, 1])
+</code></pre>
+
+<p style="text-align: center;"><img alt="" src="https://baeksoon3.pages.dev/8eec8a16-a9d2-43de-9aa6-0e505e5c1605/-/preview" style="width: 512px; height: 89px;" /></p>
+
+<ul>
+	<li>There are $2$ stations. Borzou is the owner of station $0$, which is a charging station. Arezou is the owner of station $1$, which is not a charging station.</li>
+	<li>There are $4$ tracks $(0, 0), (0, 1), (1, 0)$, and $(1, 1)$, where $(i, j)$ denotes a one-way track from station $i$ to station $j$.</li>
+	<li>Consider the game in which the train is initially placed at station $0$. If Borzou sets the switch on station $0$ towards the track $(0, 0)$, the train will indefinitely cycle through this track (note that station $0$ is a charging station). In this case, Arezou wins. Otherwise, if Borzou sets the switch on station $0$ towards track $(0, 1)$, Arezou can set the switch on station $1$ towards $(1, 0)$. If this happens, the train will indefinitely cycle through both stations. Again Arezou wins, since station $0$ is a charging station and the train will not stop. Hence, Arezou can win the game, regardless of what Borzou does.</li>
+	<li>By a similar reasoning, in the game starting at station $1$ Arezou can also win, regardless of how Borzou plays. Thus, the procedure should return $[1, 1]$.</li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+														<div class="col-md-12">
+					<section id="input" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit"  class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+			<ul>
+	<li>$1 \leq n \leq 5000$.</li>
+	<li>$n \leq m \leq 20\,000$.</li>
+	<li>There is at least one charging station.</li>
+	<li>There is at least one track starting at each station.</li>
+	<li>There might be tracks that start and end at the same station (i.e., $u[i] = v[i]$).</li>
+	<li>Each track is distinct. In other words, there are no such two indices $i$ and $j$ ($0 \leq i &lt; j \leq m-1$) that $u[i]=u[j]$ and $v[i]=v[j]$.</li>
+	<li>$0 \leq u[i], v[i] \leq n-1$ (for all $0 \leq i \leq m-1$).</li>
+</ul>
+			</div>
+			</section>
+			</div>
+																												<div class="col-md-12"><section id="subtask" class="problem-section"><div class="headline"><h2>서브태스크</h2></div><div id="problem_subtask" class="problem-text"><div class="table-responsive"><table class="table table-bordered td-middle subtask-table" style="width: 100%;"><thead><th style="width: 5%;">번호</th><th style="width: 5%;">배점</th><th style="width: 90%;">제한</th></thead><tbody><tr data-subtask-id="1"><td>1</td><td>5</td><td class="subtask-body"><p>For all $0 \leq i \leq m-1$, either $v[i] = u[i]$ or $v[i] = u[i] + 1$.</p>
+</td></tr><tr data-subtask-id="2"><td>2</td><td>10</td><td class="subtask-body"><p>$n \leq 15$.</p>
+</td></tr><tr data-subtask-id="3"><td>3</td><td>11</td><td class="subtask-body"><p>Arezou owns all stations.</p>
+</td></tr><tr data-subtask-id="4"><td>4</td><td>11</td><td class="subtask-body"><p>Borzou owns all stations.</p>
+</td></tr><tr data-subtask-id="5"><td>5</td><td>12</td><td class="subtask-body"><p>There is exactly one charging station.</p>
+</td></tr><tr data-subtask-id="6"><td>6</td><td>51</td><td class="subtask-body"><p>No additional constraints.</p>
+</td></tr></tbody></table></div></div></section></div>
+																									<div class="col-md-12">
+				<section id="hint" style="display: none;" class="problem-section">
+				<div class="headline">
+				<h2>힌트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				
+				</div>
+				</section>
+			</div>
+															<div class="col-md-12">
+						<section id="custom_grader" class="problem-section">
+							<div class="headline">
+								<h2>샘플 그레이더</h2>
+							</div>
+							<div id="problem_custom_grader" class="problem-text">
+								<p>The sample grader reads the input in the following format:</p>
+
+<ul>
+	<li>line $1$: $\;\; n \;\; m$</li>
+	<li>line $2$: $\;\; a[0] \;\; a[1] \; \ldots\; a[n-1]$</li>
+	<li>line $3$: $\;\; r[0] \;\; r[1] \; \ldots\; r[n-1]$</li>
+	<li>line $4 + i$ (for $0 \leq i \leq m-1$): $\;\; u[i] \;\; v[i]$</li>
+</ul>
+
+<p>The sample grader prints the return value of&nbsp;<code>who_wins</code>&nbsp;in the following format:</p>
+
+<ul>
+	<li>line $1$: $\;\; w[0] \;\; w[1] \; \ldots\; w[n-1]$</li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+									<div class="col-md-12">
+						<section id="custom_attachment" class="problem-section">
+							<div class="headline">
+								<h2>첨부</h2>
+							</div>
+							<div id="problem_custom_attachment" class="problem-text">
+								<ul>
+	<li><a href="https://baeksoon3.pages.dev/942976fc-af54-402a-99dc-3eeb5a306473">train.h</a></li>
+	<li><a href="https://baeksoon3.pages.dev/1e2e1234-6437-46eb-8625-ba26b67cfe11">train.cpp</a></li>
+	<li><a href="https://baeksoon3.pages.dev/14878d1c-a5d5-4098-8b6b-7720fe30f066">grader.cpp</a></li>
+	<li><a href="https://baeksoon3.pages.dev/8e7908d7-16f1-49e2-ab78-02f5523a7e7f">01.in</a></li>
+	<li><a href="https://baeksoon3.pages.dev/e55a966e-8462-40b6-b336-160e6f9a3044">01.out</a></li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+									</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="https://creativecommons.org/licenses/by/3.0/"><img src="https://licensebuttons.net/l/by/3.0/88x31.png"></a></p>
+<p><a href="/category/2">Olympiad</a>&nbsp;&gt;&nbsp;<a href="/category/99">International Olympiad in Informatics</a>&nbsp;&gt;&nbsp;<a href="/category/547">IOI 2017</a>&nbsp;&gt;&nbsp;<a href="/category/detail/2333">Day 1</a>&nbsp;3번</p><ul><li>문제를 만든 사람:&nbsp;Saeed Seddighin</li></ul></section></div>
+																<div class="col-md-12">
+				<section id="language_restrict">
+				<div class="headline">
+				<h2>제출할 수 있는 언어</h2>
+				</div>
+				<div class="problem-text">
+					<p>
+						C++17, C++14, C++20, C++14 (Clang), C++17 (Clang), C++20 (Clang)					</p>
+				</div>
+				</section>
+			</div>
+									<div class="col-md-12">
+				<section id="problem-judge-info">
+					<div class="headline">
+						<h2>채점 및 기타 정보</h2>
+					</div>
+					<ul>
+																			<li>예제는 채점하지 않는다.</li>
+																																																																	</ul>
+				</section>
+			</div>
+												</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F20078">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F20078">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script>
+	$(function() {
+		$('.language-restrict').click(function(e) {
+			$(window).scrollTo('#language_restrict', 100, {
+				over: {
+					top: -0.1
+				}
+			});
+		});
+	});
+</script>
+
+</body>
+</html>

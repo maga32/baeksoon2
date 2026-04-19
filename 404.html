@@ -49,19 +49,24 @@
 	<script>
         const tryPath = (window.location.pathname + window.location.search).replace(/\/$/, "");
 		// 2번서버
-		// 1000~20000번 문제페이지의 경우 2번서버 사용하지만, 현재 2번서버임에도 404인 경우.
-		if (tryPath.startsWith('/problem/') && 1000 <= Number(tryPath.split("/")[2]) && Number(tryPath.split("/")[2]) <= 20000) {
+		// 1000~21000번 문제페이지의 경우 2번서버로 연결
+		if (tryPath.startsWith('/problem/') && 1000 <= Number(tryPath.split("/")[2]) && Number(tryPath.split("/")[2]) <= 21000) {
+        	
 			const replaceHtml = `
 			위 <b>BAEKSOON</b> 사이트는 백준서버 종료를 대비하여 백업해놓은 정적 웹페이지입니다.<br>
 			현재 방문하신 페이지는 지원되지 않으며, <br>
-			백업되어있는 페이지는 <b>1000~35505번 문제 / 단계별문제 페이지 / 문제집 페이지</b> 입니다.<br>
+			백업되어있는 페이지는 <b><a href="/problem/1000">1000~35505번 문제</a> / <a href="/step">단계별문제 페이지</a> / <a href="/workbook/top">문제집 페이지</a></b> 입니다.<br>
 			현재 페이지는 아래 백준 원본 사이트쪽을 확인해주시기 바랍니다.<br>
-			<a href="https://www.acmicpc.net${tryPath}">https://www.acmicpc.net${tryPath}</a>
+			<a href="https://www.acmicpc.net${tryPath}" target="_blank">https://www.acmicpc.net${tryPath}</a>
 			`;
 
 			document.querySelector("#forbiddenText").innerHTML = replaceHtml;
+		// 21001~30000번 문제페이지의 경우 3번서버 연결
+		} else if (tryPath.startsWith('/problem/') && 21000 < Number(tryPath.split("/")[2]) && Number(tryPath.split("/")[2]) <= 30000) {
+        	window.location.replace("https://baeksoon3.pages.dev" + tryPath);
+		// 30001번 이상 문제페이지와 그 외 페이지는 1번서버 연결
 		} else {
-            window.location.replace("https://baeksoon.pages.dev" + tryPath);
+			window.location.replace("https://baeksoon.pages.dev" + tryPath);
 		}
 	</script>
 	<script>
@@ -93,7 +98,7 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
-<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+<script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
     <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 

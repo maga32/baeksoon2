@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>20105번: Last Supper</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="스타트링크 (Startlink)"><meta name="keywords" content="ACM-ICPC, ICPC, 프로그래밍, 온라인 저지, 정보올림피아드, 코딩, 알고리즘, 대회, 올림피아드, 자료구조"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta property="og:type" content="website"><meta property="og:image" content="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og.png"><meta property="og:site_name" content="Baekjoon Online Judge"><meta name="format-detection" content = "telephone=no"><meta name="msapplication-config" content="none"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0076c0"><meta name="msapplication-TileColor" content="#00aba9"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/style.css?version=20240112"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Open+Sans:400,400i,700,700i|Source+Code+Pro&amp;subset=korean" rel="stylesheet"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/connect.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/result.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/label.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/custom.css?version=20240112"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"><link rel="stylesheet" href="https://baeksoon.pages.dev/unify/css/theme-colors/blue.css?version=20240112"><link rel="stylesheet" href="https://baeksoon.pages.dev/css/pace.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C81GGQEMJZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C81GGQEMJZ');
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" /><meta name="username" content="">
+    
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-print.css" media="print">
+<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem.css?version=20240112">
+	<link type="text/css" rel="stylesheet" href="https://baeksoon.pages.dev/css/problem-font.css?version=20240112">
+<meta name="problem-id" content="20105">
+<meta name="user-id" content="">
+
+
+</head>
+<body >
+    <div class="wrapper">
+        <div class="header no-print"><div class="topbar"><div class="container"><ul class="loginbar pull-right"><li><a href="/register">회원가입</a></li><li class="topbar-devider"></li><li><a href="/login?next=%2Fproblem%2F20105">로그인</a></li></ul></div></div><div class="navbar navbar-default mega-menu" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars"></span></button><a class="navbar-brand" href="/"><img id="logo-header" src="https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png" alt="Logo" data-retina></a></div><div class="collapse navbar-collapse navbar-responsive-collapse"><ul class="nav navbar-nav"><li class="dropdown mega-menu-fullwidth active"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">문제</a><ul class="dropdown-menu"><li><div class="mega-menu-content"><div class="container"><div class="row equal-height"><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problemset">전체 문제</a></li><li><a href="/category">문제 출처</a></li><li><a href="/step">단계별로 풀어보기</a></li><li><a href="/problem/tags">알고리즘 분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>문제</h3></li><li><a href="/problem/only">푼 사람이 한 명인 문제</a></li><li><a href="/problem/nobody">아무도 못 푼 문제</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/problem/random">랜덤</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>출처</h3></li><li><a href="/category/1">ICPC</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/5">대학교 대회</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li></ul></div><div class="col-md-3 equal-height-in"><ul class="list-unstyled equal-height-list"><li><h3>ICPC</h3></li><li><a href="/category/7">Regionals</a></li><li><a href="/category/4">World Finals</a></li><li><a href="/category/211">Korea Regional</a></li><li><a href="/category/34">Africa and the Middle East Regionals</a></li><li><a href="/category/10">Europe Regionals</a></li><li><a href="/category/103">Latin America Regionals</a></li><li><a href="/category/8">North America Regionals</a></li><li><a href="/category/92">South Pacific Regionals</a></li></ul></div></div></div></div></li></ul></li><li><a href="/workbook/top"  >문제집</a></li><li><a href="/contest/official/list"  >대회</a></li><li><a href="/status"  >채점 현황</a></li><li><a href="/ranklist"  >랭킹</a></li><li><a href="/board/list/all"  >게시판</a></li><li><a href="/group/list/all"  >그룹</a></li><li class="dropdown "><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">더 보기</a><ul class="dropdown-menu"><li><a href="/change"  >재채점 기록</a></li><li><a href="/blog/list"  >블로그</a></li><li><a href="/lectures"  >강의</a></li><li><a href="/labs"  >실험실</a></li><li><a href="https://help.acmicpc.net/" target="_blank" >도움말 &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://stack.acmicpc.net/" target="_blank" >BOJ Stack &nbsp;<i class="fa fa-external-link"></i></a></li><li><a href="https://book.acmicpc.net/" target="_blank" >BOJ Book &nbsp;<i class="fa fa-external-link"></i></a></li></ul></li><li><a href="/search"  ><i class="fa fa-search search-btn"></i></a></li></ul></div></div></div></div><form action="/logout" method="post" id="logout_form"><input type='hidden' value='%2Fproblem%2F20105' name="next"></form>
+        
+<div class="container content">
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="horizontal"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div id="result_log"></div>
+		</div>
+		<div class="col-md-12">
+							<ul class="nav nav-pills no-print problem-menu" ><li class="active">
+		<a href="/problem/20105">20105번</a>
+</li><li><a href="/submit/20105"  >제출</a></li><li><a href="/problem/status/20105"  >맞힌 사람</a></li><li><a href="/short/status/20105"  >숏코딩</a></li><li><a href="/problem/history/20105"  >재채점 결과</a></li><li><a href="/status?from_problem=1&amp;problem_id=20105"  >채점 현황</a></li><li><a href="/board/search/all/problem/20105"  >질문 게시판</a></li></ul>
+					</div>
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><span class="printable">
+	20105번
+ - </span><span id="problem_title">Last Supper</span>
+				<span class="problem-label problem-label-subtask">서브태스크</span><span class="problem-label problem-label-partial">점수</span><span class="problem-label problem-label-multilang">다국어</span><span class="problem-label problem-label-language-restrict language-restrict">언어 제한</span><span class="problem-label problem-label-func">함수 구현</span><span class="problem-label problem-label-two-steps">투 스텝</span>				<div class="btn-group pull-right problem-button">
+														</div>
+				</h1>
+									
+							</div>
+		</div>
+		<div class="col-md-12"><div class="table-responsive"><table class="table" id="problem-info"><thead><tr><th style="width:16%;">시간 제한</th><th style="width:16%;">메모리 제한</th><th style="width:17%;">제출</th><th style="width:17%;">정답</th><th style="width:17%;">맞힌 사람</th><th style="width:17%;">정답 비율</th></tr></thead><tbody><tr><td>2 초 </td><td>512 MB</td><td>57</td><td>28</td><td>24</td><td>48.980%</td></tr></tbody></table></div></div>
+						<div id="problem-body" class="">
+			<div class="col-md-12">
+				<section id="description"  class="problem-section">
+				<div class="headline">
+				<h2>문제</h2>
+				</div>
+				<div id="problem_description" class="problem-text">
+				<p>Leonardo was very active when working on the Last Supper, his most famous mural painting: one of his first daily tasks was that of deciding which tempera colors to use during the rest of the working day. He needed many colors but could only keep a limited number of them on his scaffold. His assistant was in charge, among other things, of climbing up the scaffold to deliver colors to him and then getting down to put them back on the suitable shelf on the floor.</p>
+
+<p>In this task, you will need to write two separate programs to help the assistant. The first program will receive Leonardo&#39;s instructions (a sequence of colors Leonardo will need during the day), and create a short string of bits, called advice. While processing Leonardo&#39;s requests during the day, the assistant will not have access to Leonardo&#39;s future requests, only to the advice produced by your first program. The second program will receive the advice, and then receive and process Leonardo&#39;s requests in an online fashion (i.e., one at a time). This program must be able to understand what the advice means and use it to make optimal choices. Everything is explained below in more detail.</p>
+
+<p><strong>Moving colors between shelf and scaffold</strong></p>
+
+<p>We will consider a simplified scenario. Suppose that there are N colors numbered from 0 to N - 1, and that each day Leonardo asks the assistant for a new color exactly N times. Let C be the sequence of the N color requests made by Leonardo. Thus we may think of C as a sequence of N numbers, each being between 0 and N - 1, inclusive. Note that some colors might not occur in C at all, and others may appear multiple times.</p>
+
+<p>The scaffold is always full and contains some K of the N colors, with K &lt; N. Initially, the scaffold contains the colors from 0 to K - 1, inclusive.</p>
+
+<p>The assistant processes Leonardo&#39;s requests one at a time. Whenever the requested color is already on the scaf old, the assistant can rest. Otherwise, he has to pick up the requested color from the shelf and move it to the scaffold. Of course, there is no room on the scaffold for the new color, so the assistant must then choose one of the colors on the scaffold and take it from the scaffold back to the shelf.</p>
+
+<p><strong>Leonardo&#39;s optimal strategy</strong></p>
+
+<p>The assistant wants to rest as many times as possible. The number of requests for which he can rest depends on his choices during the process. More precisely, each time the assistant has to remove a color from the scaffold, different choices may lead to different outcomes in the future. Leonardo explains to him how he can achieve his goal knowing C. The best choice for the color to be removed from the scaffold is obtained by examining the colors currently on the scaffold, and the remaining color requests in C. A color should be chosen among those on the scaffold according to the following rules:</p>
+
+<ul>
+	<li>If there is a color on the scaffold that will never be needed in the future, the assistant should remove such a color from the scaffold.</li>
+	<li>Otherwise, the color removed from the scaffold should be the one that will next be needed furthest in the future. (That is, for each of the colors on the scaffold we find its first future occurrence. The color moved back to the shelf is the one that will be needed last.)</li>
+</ul>
+
+<p>It can be proved that when using Leonardo&#39;s strategy, the assistant will rest as many times as possible.</p>
+
+<p><strong>Example 1</strong></p>
+
+<p>Let N = 4, so we have 4 colors (numbered from 0 to 3) and 4 requests. Let the sequence of requests be C = (2, 0, 3, 0). Also, assume that K = 2. That is, Leonardo has a scaffold capable of holding 2 colors at any time. As stated above, the scaffold initially contains the colors 0 and 1. We will write the content of the scaffold as follows: [0, 1]. One possible way that the assistant could handle the requests is as follows.</p>
+
+<ul>
+	<li>The first requested color (number 2) is not on the scaffold. The assistant puts it there and decides to remove color 1 from the scaffold. The current scaffold is [0, 2].</li>
+	<li>The next requested color (number 0) is already on the scaffold, so the assistant can rest.</li>
+	<li>For the third request (number 3), the assistant removes color 0, changing the scaffold to [3, 2].</li>
+	<li>Finally, the last requested color (number 0) has to be taken from the shelf to the scaffold. The assistant decides to remove color 2, and the scaffold now becomes [3, 0].</li>
+</ul>
+
+<p>Note that in the above example the assistant did not follow Leonardo&#39;s optimal strategy. The optimal strategy would remove the color 2 in the third step, so the assistant could then rest again in the final step.</p>
+
+<p><strong>Assistant&#39;s strategy when his memory is limited </strong></p>
+
+<p>In the morning, the assistant asks Leonardo to write C on a piece of paper, so that he can find and follow the optimal strategy. However, Leonardo is obsessed with keeping his work techniques secret, so he refuses to let the assistant have the paper. He only allowed the assistant to read C and try to remember it.</p>
+
+<p>Unfortunately, the assistant&#39;s memory is very bad. He is only able to remember up to M bits. In general, this might prevent him from being able to reconstruct the entire sequence C. Hence, the assistant has to come up with some clever way of computing the sequence of bits he will remember. We will call this sequence the advice sequence and we will denote it A.</p>
+
+<p><strong>Example 2</strong></p>
+
+<p>In the morning, the assistant can take Leonardo&#39;s paper with the sequence C, read the sequence, and make all the necessary choices. One thing he might choose to do would be to examine the state&nbsp;of the scaffold after each of the requests. For example, when using the (sub-optimal) strategy given in Example 1, the sequence of scaffold states would be [0, 2], [0, 2], [3, 2], [3, 0]. (Recall that he knows that the initial state of the scaffold is [0, 1].)</p>
+
+<p>Now assume that we have M = 16, so the assistant is able to remember up to 16 bits of information. As N = 4, we can store each color using 2 bits. Therefore 16 bits are sufficient to store the above sequence of scaffold states. Thus the assistant computes the following advice sequence: A = (0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0).</p>
+
+<p>Later in the day, the assistant can decode this advice sequence and use it to make his choices.</p>
+
+<p>(Of course, with M = 16 the assistant can also choose to remember the entire sequence C instead, using only 8 of the available 16 bits. In this example we just wanted to illustrate that he may have other options, without giving away any good solution.)</p>
+
+<p><strong>Statement</strong></p>
+
+<p>You have to write two separate programs in the same programming language. These programs will be executed sequentially, without being able to communicate with each other during the execution.</p>
+
+<p>The first program will be the one used by the assistant in the morning. This program will be given the sequence C, and it has to compute an advice sequence A.</p>
+
+<p>The second program will be the one used by the assistant during the day. This program will receive the advice sequence A, and then it has to process the sequence C of Leonardo&#39;s requests. Note that the sequence C will only be revealed to this program one request at a time, and each request has to be processed before receiving the next one.</p>
+
+<p>More precisely, in the first program you have to implement a single routine <code>ComputeAdvice(C, N, K, M)</code> having as input the array C of N integers (each in 0, &hellip;, N - 1), the number K of colors on the scaffold, and the number M of bits available for the advice. This program must compute an advice sequence A that consists of up to M bits. The program must then communicate the sequence A to the system by calling, for each bit of A in order, the following routine:</p>
+
+<ul>
+	<li><code>WriteAdvice(B)</code> &mdash; append the bit B to the current advice sequence A. (You can call this routine at most M times.)</li>
+</ul>
+
+<p>In the second program you have to implement a single routine <code>Assist(A, N, K, R)</code>. The input to this routine is the advice sequence A, the integers N and K as defined above, and the actual length R of the sequence A in bits (R &le; M). This routine should execute your proposed strategy for the assistant, using the following routines that are provided to you:</p>
+
+<ul>
+	<li><code>GetRequest()</code> &mdash; returns the next color requested by Leonardo. (No information about the future requests is revealed.)</li>
+	<li><code>PutBack(T)</code> &mdash; put the color T from the scaffold back to the shelf. You may only call this routine with T being one of the colors currently on the scaffold.</li>
+</ul>
+
+<p>When executed, your routine <code>Assist</code> must call <code>GetRequest</code> exactly N times, each time receiving one of Leonardo&#39;s requests, in order. After each call to <code>GetRequest</code>, if the color it returned is not in the scaffold, you must also call <code>PutBack(T)</code> with your choice of T. Otherwise, you must not call <code>PutBack</code>. Failure to do so is considered an error and it will cause the termination of your program. Please recall that in the beginning the scaffold contains the colors from 0 to K - 1, inclusive.</p>
+
+<p>A particular test case will be considered solved if your two routines follow all the imposed constraints, and the total number of calls to <code>PutBack</code> is exactly equal to that of Leonardo&#39;s optimal strategy. Note that if there are multiple strategies that achieve the same number of calls to <code>PutBack</code>, your program is allowed to perform any of them. (I.e., it is not required to follow Leonardo&#39;s strategy, if there is another equally good strategy.)</p>
+
+<p><strong>Example 3</strong></p>
+
+<p>Continuing Example 2, assume that in <code>ComputeAdvice</code> you computed A = (0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0). In order to communicate it to the system, you would have to make the following sequence of calls: <code>WriteAdvice(0)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(1)</code>, <code>WriteAdvice(0)</code>, <code>WriteAdvice(0)</code>.</p>
+
+<p>Your second routine <code>Assist</code> would then be executed, receiving the above sequence A, and the values N = 4, K = 2, and R = 16. The routine <code>Assist</code> then has to perform exactly N = 4 calls to <code>GetRequest</code>. Also, after some of those requests, <code>Assist</code> will have to call <code>PutBack(T)</code> with a suitable choice of T.</p>
+
+<p>The table below shows a sequence of calls that corresponds to the (sub-optimal) choices from Example 1. The hyphen denotes no call to <code>PutBack</code>.</p>
+
+<table class="table table-bordered table-center-20">
+	<thead>
+		<tr>
+			<th><code>GetRequest()</code></th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td><code>PutBack(1)</code></td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>-</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><code>PutBack(0)</code></td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td><code>PutBack(2)</code></td>
+		</tr>
+	</tbody>
+</table>
+
+				</div>
+				</section>
+			</div>
+																	<div class="col-md-12">
+					<section id="input" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>입력</h2>
+					</div>
+					<div id="problem_input" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+	
+				<div class="col-md-12">
+					<section id="output" style="display: none;" class="problem-section">
+					<div class="headline">
+					<h2>출력</h2>
+					</div>
+					<div id="problem_output" class="problem-text">
+					
+					</div>
+					</section>
+				</div>
+						<div class="col-md-12">
+			<section id="limit" style="display:none;" class="problem-section">
+			<div class="headline">
+			<h2>제한</h2>
+			</div>
+			<div id="problem_limit" class="problem-text">
+						</div>
+			</section>
+			</div>
+												<div class="col-md-12">
+						<section id="custom_implementation" class="problem-section">
+							<div class="headline">
+								<h2></h2>
+							</div>
+							<div id="problem_custom_implementation" class="problem-text">
+								<pre>
+void ComputeAdvice(int *C, int N, int K, int M);
+void WriteAdvice(unsigned char a);
+void Assist(unsigned char *A, int N, int K, int R);
+void PutBack(int T);
+int GetRequest();
+</pre>
+
+<p>These routines must behave as described above. Of course you are free to implement other routines for their internal use. For C/C++ programs, your internal routines should be declared static, as the sample grader will link them together. Alternately, just avoid having two routines (one in each program) with the same name. Your submissions must not interact in any way with standard input/output, nor with any other file.</p>
+
+<p>When programming your solution, you also have to take care of the following instructions (the templates you can find in your contest environment already satisfy the requirements listed below).</p>
+
+<p>At the beginning of your solution, you have to include the file advisor.h and assistant.h, respectively, in the advisor and in the assistant. This is done by including in your source the line:</p>
+
+<pre>
+#include &quot;advisor.h&quot;</pre>
+
+<p>The two files advisor.h and assistant.h will be provided to you in a directory inside your contest environment and will also be offered by the contest Web interface. You will also be provided (through the same channels) with code and scripts to compile and test your solution. Specifically, after copying your solution into the directory with these scripts, you will have to run compile_c.sh or compile_cpp.sh (depending on the language of your code).</p>
+
+							</div>
+						</section>
+					</div>
+																																<div class="col-md-12">
+							<section id="subtask1" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 1 (8점)</h2>
+							</div>
+							<div id="problem_subtask1" class="problem-text">
+															<ul>
+	<li>N &le; 5 000.</li>
+	<li>You can use at most M = 65 000 bits.</li>
+</ul>
+
+							</div>
+							</section>
+							</div>
+													<div class="col-md-12">
+							<section id="subtask2" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 2 (9점)</h2>
+							</div>
+							<div id="problem_subtask2" class="problem-text">
+															<ul>
+	<li>N &le; 100 000.</li>
+	<li>You can use at most M = 2 000 000 bits.</li>
+</ul>
+
+							</div>
+							</section>
+							</div>
+													<div class="col-md-12">
+							<section id="subtask3" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 3 (9점)</h2>
+							</div>
+							<div id="problem_subtask3" class="problem-text">
+															<ul>
+	<li>N &le; 100 000.</li>
+	<li>K &le; 25 000.</li>
+	<li>You can use at most M = 1 500 000 bits.</li>
+</ul>
+
+							</div>
+							</section>
+							</div>
+													<div class="col-md-12">
+							<section id="subtask4" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 4 (35점)</h2>
+							</div>
+							<div id="problem_subtask4" class="problem-text">
+															<ul>
+	<li>N &le; 5 000.</li>
+	<li>You can use at most M = 10 000 bits.</li>
+</ul>
+
+							</div>
+							</section>
+							</div>
+													<div class="col-md-12">
+							<section id="subtask5" class="problem-section">
+							<div class="headline">
+							<h2>서브태스크 5 (39점)</h2>
+							</div>
+							<div id="problem_subtask5" class="problem-text">
+															<ul>
+	<li>N &le; 100 000.</li>
+	<li>K &le; 25 000.</li>
+	<li>You can use at most M = 1 800 000 bits.</li>
+</ul>
+
+<p>The score for this subtask depends on the length R of the advice your program communicates. More precisely, if R<sub>max</sub> is the maximum (over all test cases) of the length of the advice sequence produced by your routine <code>ComputeAdvice</code>, your score will be:</p>
+
+<ul>
+	<li>39 points if R<sub>max</sub> &le; 200 000;</li>
+	<li>39 (1 800 000 - R<sub>max</sub>) / 1 600 000 points if 200 000 &lt; R<sub>max</sub> &lt; 1 800 000;</li>
+	<li>0 points if R<sub>max</sub> &ge; 1 800 000.</li>
+</ul>
+
+							</div>
+							</section>
+							</div>
+																															<div class="col-md-12">
+				<section id="hint"  class="problem-section">
+				<div class="headline">
+				<h2>노트</h2>
+				</div>
+				<div id="problem_hint" class="problem-text">
+				<p>실제 IOI 문제와는 다르게 파일 하나에 모두 모아서 제출해야 한다.</p>
+
+				</div>
+				</section>
+			</div>
+															<div class="col-md-12">
+						<section id="custom_grader" class="problem-section">
+							<div class="headline">
+								<h2>샘플 그레이더</h2>
+							</div>
+							<div id="problem_custom_grader" class="problem-text">
+								<p>The sample grader will accept input formatted as follows:</p>
+
+<ul>
+	<li>line 1: N, K, M;</li>
+	<li>lines 2, &hellip;, N + 1: C[i].</li>
+</ul>
+
+<p>The grader will first execute the routine <code>ComputeAdvice</code>. This will generate a file advice.txt, containing the individual bits of the advice sequence, separated by spaces and terminated by a 2.</p>
+
+<p>Then it will proceed to execute your Assist routine, and generate output in which each line is either of the form &quot;<code>R [number]</code>&quot;, or of the form &quot;<code>P [number]</code>&quot;. Lines of the first type indicate calls to <code>GetRequest()</code> and the replies received. Lines of the second type represent calls to <code>PutBack()</code> and the colors chosen to put back. The output is terminated by a line of the form &quot;<code>E</code>&quot;.</p>
+
+<p>Please note that on the official grader the running time of your program may differ slightly from the time on your local computer. This difference should not be significant. Still, you are invited to use the test interface in order to verify whether your solution runs within the time limit.</p>
+
+							</div>
+						</section>
+					</div>
+									<div class="col-md-12">
+						<section id="custom_attachment" class="problem-section">
+							<div class="headline">
+								<h2>첨부</h2>
+							</div>
+							<div id="problem_custom_attachment" class="problem-text">
+								<ul>
+	<li><a href="https://baeksoon3.pages.dev/2da915b5-27ea-4270-8f0c-dd413304c589">env.zip</a></li>
+</ul>
+
+							</div>
+						</section>
+					</div>
+									</div>
+									<div class="col-md-12"><section id="source"><div class="headline"><h2>출처</h2></div><p><a href="/category/2">Olympiad</a>&nbsp;&gt;&nbsp;<a href="/category/99">International Olympiad in Informatics</a>&nbsp;&gt;&nbsp;<a href="/category/552">IOI 2012</a>&nbsp;&gt;&nbsp;<a href="/category/detail/2631">Day 2</a>&nbsp;5번</p><ul><li>문제를 만든 사람:&nbsp;Richard Královič</li></ul></section></div>
+																<div class="col-md-12">
+				<section id="language_restrict">
+				<div class="headline">
+				<h2>제출할 수 있는 언어</h2>
+				</div>
+				<div class="problem-text">
+					<p>
+						C++17, C++14, C++20, C++14 (Clang), C++17 (Clang), C++20 (Clang)					</p>
+				</div>
+				</section>
+			</div>
+									<div class="col-md-12">
+				<section id="problem-judge-info">
+					<div class="headline">
+						<h2>채점 및 기타 정보</h2>
+					</div>
+					<ul>
+																			<li>예제는 채점하지 않는다.</li>
+																																											<li>이 문제의 채점 우선 순위는 2이다.</li>
+																																			</ul>
+				</section>
+			</div>
+												</div>
+    <div class="margin-bottom-20"></div>
+				<div style="width: 100%;" class="no-print"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8806842758252812"
+ crossorigin="anonymous"></script><ins class="adsbygoogle" style="display:block;" data-ad-client="ca-pub-8806842758252812" data-ad-slot="1129585289" data-ad-format="auto"data-full-width-responsive="true"></ins><script>
+(adsbygoogle = window.adsbygoogle || []).push({ });
+</script></div><div class="margin-bottom-20 no-print"></div>
+	
+</div>
+
+
+        <div class="footer-v3 no-print"><div class="footer"><div class="container"><div class="row"><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>Baekjoon Online Judge</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/about">소개</a></li><li><a href="/news">뉴스</a></li><li><a href="/live">생중계</a></li><li><a href="/poll">설문조사</a></li><li><a href="/blog">블로그</a></li><li><a href="/board/view/70222">디스코드 서버</a></li><li><a href="/donate">기부하기</a></li><li><a href="https://github.com/Startlink/BOJ-Feature-Request">기능 추가 요청</a></li><li><a href="https://github.com/Startlink/BOJ-spj">스페셜 저지 제작</a></li><li><a href="/labs">실험실</a></li></ul><div class="thumb-headline"><h2>채점 현황</h2></div><ul class="list-unstyled simple-list"><li><a href="/status">채점 현황</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>문제</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/problemset">문제</a></li><li><a href="/step">단계</a></li><li><a href="/problem/tags">분류</a></li><li><a href="/problem/added">추가된 문제</a></li><li><a href="/problem/ranking">문제 순위</a></li><li><a href="/problem/recent/submit">최근 제출된 문제</a></li><li><a href="/problem/recent/accepted">최근 풀린 문제</a></li><li><a href="/change">재채점 및 문제 수정</a></li></ul><div class="thumb-headline"><h2>유저 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/353">FunctionCup</a></li><li><a href="/category/469">Good Bye, BOJ</a></li><li><a href="/category/476">IDTcup</a></li><li><a href="/category/319">kriiicon</a></li><li><a href="/category/489">Semi-Game Cup</a></li><li><a href="/category/420">구데기컵</a></li><li><a href="/category/358">꼬마컵</a></li><li><a href="/category/421">네블컵</a></li><li><a href="/category/413">소프트콘</a></li><li><a href="/category/776">아니메컵</a></li><li><a href="/category/850">월간 향유회</a></li><li><a href="/category/416">웰노운컵</a></li><li><a href="/category/867">유틸컵</a></li><li><a href="/category/441">키파컵</a></li><li><a href="/category/1045">피갤컵</a></li><li><a href="/category/829">흐즈로컵</a></li><li><a href="/category/detail/1743">HYEA Cup</a></li></ul><div class="thumb-headline"><h2>고등학교 대회</h2></div><ul class="list-inline simple-list margin-bottom"><li><a href="/category/836">NLCS Jeju</a></li><li><a href="/category/364">경기과학고등학교</a></li><li><a href="/category/630">경기북과학고등학교</a></li><li><a href="/category/669">단국대학교부속소프트웨어고등학교</a></li><li><a href="/category/417">대구과학고등학교</a></li><li><a href="/category/1074">대전과학고등학교</a></li><li><a href="/category/435">서울과학고등학교</a></li><li><a href="/category/394">선린인터넷고등학교</a></li><li><a href="/category/610">세종과학예술영재학교</a></li><li><a href="/category/854">송도고등학교</a></li><li><a href="/category/542">한국과학영재학교</a></li><li><a href="/category/1053">한국디지털미디어고등학교</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2>출처</h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="/category/1">ICPC</a></li><li><a href="/category/211">ICPC Korea Regional</a></li><li><a href="/category/2">Olympiad</a></li><li><a href="/category/55">한국정보올림피아드</a></li><li><a href="/category/57">한국정보올림피아드시․도지역본선</a></li><li><a href="/category/428">카카오 코드 페스티벌</a></li><li><a href="/category/215">Coder's High</a></li><li><a href="/category/485">Open Cup</a></li><li><a href="/category/477">Petrozavodsk Programming Camp</a></li></ul><div class="thumb-headline"><h2>대학교 대회</h2></div><ul class="list-inline simple-list"><li><a href="/category/662">DGIST</a></li><li><a href="/category/320">KAIST</a></li><li><a href="/category/426">POSTECH</a></li><li><a href="/category/461">UNIST</a></li><li><a href="/category/466">가톨릭대학교</a></li><li><a href="/category/518">강원대학교</a></li><li><a href="/category/454">건국대학교</a></li><li><a href="/category/438">경북대학교</a></li><li><a href="/category/409">경인지역 대학 연합</a></li><li><a href="/category/341">고려대학교</a></li><li><a href="/category/434">광주과학기술원</a></li><li><a href="/category/361">국민대학교</a></li><li><a href="/category/671">부산대학교</a></li><li><a href="/category/83">서강대학교</a></li><li><a href="/category/674">서울과학기술대학교</a></li><li><a href="/category/354">서울대학교</a></li><li><a href="/category/709">서울사이버대학교</a></li><li><a href="/category/1004">서울시립대학교</a></li><li><a href="/category/468">성균관대학교</a></li><li><a href="/category/527">숙명여자대학교</a></li><li><a href="/category/352">숭실대학교</a></li><li><a href="/category/408">아주대학교</a></li><li><a href="/category/334">연세대학교</a></li><li><a href="/category/541">연세대학교 미래캠퍼스</a></li><li><a href="/category/467">인천대학교</a></li><li><a href="/category/336">인하대학교</a></li><li><a href="/category/925">전남대학교</a></li><li><a href="/category/347">전북대학교</a></li><li><a href="/category/400">중앙대학교</a></li><li><a href="/category/402">충남대학교</a></li><li><a href="/category/607">한국항공대학교</a></li><li><a href="/category/440">한양대학교</a></li><li><a href="/category/418">한양대학교 ERICA 캠퍼스</a></li><li><a href="/category/363">홍익대학교</a></li><li><a href="/category/318">전국 대학생 프로그래밍 대회 동아리 연합</a></li><li><a href="/category/497">신촌지역 대학생 프로그래밍 대회 동아리 연합</a></li></ul></div><div class="col-sm-3 md-margin-bottom-40"><div class="thumb-headline"><h2><a href="https://help.acmicpc.net">도움말</a></h2></div><ul class="list-unstyled simple-list margin-bottom-10"><li><a href="https://help.acmicpc.net/judge/info">채점 도움말 및 채점 환경</a></li><li><a href="https://help.acmicpc.net/judge/rejudge">재채점 안내</a></li><li><a href="https://help.acmicpc.net/judge/rte">런타임 에러 도움말</a></li><li><a href="https://help.acmicpc.net/problem/style">문제 스타일 안내</a></li><li><a href="https://help.acmicpc.net/language/info">컴파일 또는 실행 옵션, 컴파일러 버전, 언어 도움말</a></li><li><a href="https://help.acmicpc.net/workbook">문제집 도움말</a></li><li><a href="https://help.acmicpc.net/contest/open">대회 개최 안내</a></li><li><a href="https://help.acmicpc.net/problem/add">문제 출제 안내</a></li><li><a href="https://help.acmicpc.net/rule">이용 규칙</a></li><li><a href="https://help.acmicpc.net/stats">통계 도움말</a></li><li><a href="https://help.acmicpc.net/question">질문 도움말</a></li><li><a href="https://help.acmicpc.net/faq">자주묻는 질문</a></li><li><a href="https://help.acmicpc.net/etc/short">짧은 주소 안내</a></li><li><a href="https://help.acmicpc.net/ad">광고 안내</a></li></ul></div></div></div></div><div class="copyright"><div class="container"><div class="row"><div class="col-md-9 col-sm-12"><p>&copy; 2026 All Rights Reserved. <a href="https://startlink.io">주식회사 스타트링크</a>&nbsp;|&nbsp;<a href="/terms">서비스 약관</a>&nbsp;|&nbsp;<a href="/privacy">개인정보 보호</a>&nbsp;|&nbsp;<a href="/terms/payment">결제 이용 약관</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net">도움말</a>&nbsp;|&nbsp;<a href="https://help.acmicpc.net/ad">광고 문의</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj.md">업데이트 노트</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-issues.md">이슈</a>&nbsp;|&nbsp;<a href="https://github.com/Startlink/update-note/blob/master/boj-todo.md">TODO</a></p></div><div class="col-md-3 col-sm-12"><ul class="social-icons pull-right"><li><a href="https://www.facebook.com/onlinejudge" data-original-title="Facebook" class="rounded-x social_facebook"></a></li><li><a href="https://startlink.blog" data-original-title="Wordpress" class="rounded-x social_wordpress"></a></li></ul></div></div><div class="row"><div class="col-sm-12"><a href="https://startlink.io" class="hidden-xs"><img src="https://d2gd6pc034wcta.cloudfront.net/logo/startlink-logo-white-only.png" class="pull-right startlink-logo"></a><ul class="list-unstyled simple-list"><li>사업자 등록 번호: 541-88-00682</li><li>대표자명: 최백준</li><li>주소: 서울시 서초구 서초대로74길 29 서초파라곤 412호</li><li>전화번호: 02-521-0487 (이메일로 연락 주세요)</li><li>이메일: <a href="mailto:contacts@startlink.io">contacts@startlink.io</a></li><li>통신판매신고번호: 제 2017-서울서초-2193 호</li></ul></div><div class="col-sm-9"><p id="no-acm-icpc"></p></div><div class="col-sm-3"><p class="pull-right"><a href="/lang?lang=0&next=%2Fproblem%2F20105">한국어</a>&nbsp;|&nbsp;<a href="/lang?lang=1&next=%2Fproblem%2F20105">English (Beta)</a></p></div></div></div></div></div>
+    </div>
+    <div id="fb-root"></div><script>
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '322026491226049',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.8'
+});
+};
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ko_KR/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+!function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments) };if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s) }(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1670563073163149');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1670563073163149&ev=PageView&noscript=1"/></noscript><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/ko.js"></script>
+<script type="text/javascript" src="https://baeksoon.pages.dev/unify/js/app.min.js?version=20240112"></script><script type="text/javascript">jQuery(document).ready(function() {App.init(0);});</script><!--[if lt IE 9]><script src="https://baeksoon.pages.dev/unify/plugins/respond.js"></script><script src="https://baeksoon.pages.dev/unify/plugins/html5shiv.js"></script><script src="https://baeksoon.pages.dev/unify/js/plugins/placeholder-IE-fixes.js"></script><![endif]--><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><script src="https://js.pusher.com/4.2/pusher.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://baeksoon.pages.dev/js/mathjax.js"></script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+
+<script type="text/javascript" src="https://baeksoon.pages.dev/js/detectmobilebrowser.js"></script>
+<script type="text/javascript">
+	function update_image_responsive() {
+		if ($.browser.mobile) {
+			$(".problem-text img").each(function(index) {
+				if (!$(this).hasClass('no-responsive')) {
+					$(this).addClass("img-responsive").css('width', 'auto').css('height', 'auto').css('max-width','100%');
+				}
+			});
+			$(".problem-text table[class^='table-'], .problem-text table[class*=' table-']").each(function(index) {
+				$(this).css('margin-left',0);
+				$(this).css('margin-right',0);
+			});
+		}
+	}
+	$(document).ready(function() {
+		update_image_responsive();
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+<script src="https://baeksoon.pages.dev/js/problem/clipboard.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.show-spoiler').click(function(e) {
+    	e.preventDefault();
+    	$(this).hide();
+    	$('#problem_tags div.spoiler').show();
+    });
+	});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script>
+	$(function() {
+		$('.language-restrict').click(function(e) {
+			$(window).scrollTo('#language_restrict', 100, {
+				over: {
+					top: -0.1
+				}
+			});
+		});
+	});
+</script>
+
+</body>
+</html>
