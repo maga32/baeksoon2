@@ -47,27 +47,13 @@
     </div>
     <div id="fb-root"></div>
 	<script>
-        const tryPath = (window.location.pathname + window.location.search).replace(/\/$/, "");
-		// 2번서버
-		// 1000~21000번 문제페이지의 경우 2번서버로 연결
-		if (tryPath.startsWith('/problem/') && 1000 <= Number(tryPath.split("/")[2]) && Number(tryPath.split("/")[2]) <= 21000) {
-        	
-			const replaceHtml = `
-			위 <b>BAEKSOON</b> 사이트는 백준서버 종료를 대비하여 백업해놓은 정적 웹페이지입니다.<br>
-			현재 방문하신 페이지는 지원되지 않으며, <br>
-			백업되어있는 페이지는 <b><a href="/problem/1000">1000~35505번 문제</a> / <a href="/step">단계별문제 페이지</a> / <a href="/workbook/top">문제집 페이지</a></b> 입니다.<br>
-			현재 페이지는 아래 백준 원본 사이트쪽을 확인해주시기 바랍니다.<br>
-			<a href="https://www.acmicpc.net${tryPath}" target="_blank">https://www.acmicpc.net${tryPath}</a>
-			`;
-
-			document.querySelector("#forbiddenText").innerHTML = replaceHtml;
-		// 21001~30000번 문제페이지의 경우 3번서버 연결
-		} else if (tryPath.startsWith('/problem/') && 21000 < Number(tryPath.split("/")[2]) && Number(tryPath.split("/")[2]) <= 30000) {
-        	window.location.replace("https://baeksoon3.pages.dev" + tryPath);
-		// 30001번 이상 문제페이지와 그 외 페이지는 1번서버 연결
-		} else {
-			window.location.replace("https://baeksoon.pages.dev" + tryPath);
-		}
+		// 404페이지에 사용할 공통함수 로드
+		const runEnv = location.host.startsWith('test') ? "test."
+					 : location.host.startsWith('dev')  ? "dev."
+					 : "";
+		const script404 = document.createElement('script');
+		script404.src = `https://${runEnv}baeksoon.pages.dev/404.js`;
+		document.head.appendChild(script404);
 	</script>
 	<script>
 window.fbAsyncInit = function() {
